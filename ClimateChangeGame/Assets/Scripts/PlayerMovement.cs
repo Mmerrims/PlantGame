@@ -269,7 +269,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil")//Checks if the player is touching the ground
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")//Checks if the player is touching the ground
         {
             print("Touch Grass");
 
@@ -288,7 +288,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil")
+        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")
         {//Makes the game realize the player is not touching the ground
             //print("Dont Touch Grass");
             InAir = true;

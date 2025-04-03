@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7241864158892999974}
   m_Layer: 8
   m_Name: OilBullet
-  m_TagString: Oil
+  m_TagString: OilBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c20e2011bc23afa418db7a8a1d76e74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerRigidbody: {fileID: 7241864158892999974}
-  _thisTransform: {fileID: 1479131770173395263}
+  _bigBullet: 0
 --- !u!212 &4948527062829954406
 SpriteRenderer:
   m_ObjectHideFlags: 0

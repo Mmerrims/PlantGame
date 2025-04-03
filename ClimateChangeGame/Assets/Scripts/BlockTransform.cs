@@ -32,7 +32,7 @@ public class BlockTransform : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        else if (_grass == true && collision.gameObject.CompareTag("Oil") || _ground == true && collision.gameObject.CompareTag("Oil"))
+        else if (_grass == true && collision.gameObject.CompareTag("OilBullet") || _ground == true && collision.gameObject.CompareTag("OilBullet"))
         {
             Instantiate(_oilObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
             Destroy(this.gameObject);
