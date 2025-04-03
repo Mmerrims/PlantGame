@@ -911,14 +911,14 @@ MonoBehaviour:
   _player: {fileID: 1929491096}
   _bulletSpawn: {fileID: 1094640817}
   _bulletSpeed: 40
-  _altBulletSpeed: 20
+  _altBulletSpeed: 30
   MPI: {fileID: 1929491103}
   CanShoot: 1
   AltCanShoot: 1
   _maxShotCooldown: 0.05
   _shotCooldown: 0.05
   _altMaxShotCooldown: 1
-  _altShotCooldown: 5
+  _altShotCooldown: 0.5
   _maxShots: 200
   _currentShots: 200
   _maxReloadCooldown: 0.05
