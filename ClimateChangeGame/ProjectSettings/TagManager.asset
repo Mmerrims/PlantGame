@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - GrassGround
   - BigGrass
+  - GrassWall
+  - OilBullet
   layers:
   - Default
   - TransparentFX
