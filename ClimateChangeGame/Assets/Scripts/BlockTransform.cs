@@ -22,7 +22,16 @@ public class BlockTransform : MonoBehaviour
                 Instantiate(_grassObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
                 Destroy(this.gameObject);
             }
-        } 
+        }
+        else if (_oil == true && collision.gameObject.CompareTag("BigGrass") || _ground == true && collision.gameObject.CompareTag("BigGrass"))
+        {
+            _health -= 5;
+            if (_health <= 0)
+            {
+                Instantiate(_grassObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+                Destroy(this.gameObject);
+            }
+        }
         else if (_grass == true && collision.gameObject.CompareTag("Oil") || _ground == true && collision.gameObject.CompareTag("Oil"))
         {
             Instantiate(_oilObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
