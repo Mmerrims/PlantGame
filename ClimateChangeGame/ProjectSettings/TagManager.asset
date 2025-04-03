@@ -3,17 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Oil
+  - Grass
+  - Ground
+  - GrassGround
+  - BigGrass
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - PlayerBullet
+  - EnemyBullet
+  - Enemy
   - 
   - 
   - 
