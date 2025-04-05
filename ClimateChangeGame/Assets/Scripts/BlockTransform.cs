@@ -17,6 +17,7 @@ public class BlockTransform : MonoBehaviour
         if (_oil == true && collision.gameObject.CompareTag("Grass") || _ground == true && collision.gameObject.CompareTag("Grass"))
         {
             _health -= 1;
+            Destroy(collision.gameObject);
             if (_health <= 0)
             {
                 Instantiate(_grassObject, new Vector2(this.transform.position.x, this.transform.position.y), Quaternion.identity);
