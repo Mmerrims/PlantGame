@@ -1,3 +1,11 @@
+/*****************************************************************************
+// File Name :         Enemy Script.cs
+// Author :            Yael Martoral
+// Creation Date :     April 5th, 2025
+//
+// Brief Description : It controls the enemy's behavior and makes them patrol 
+                       shoot at the player
+*****************************************************************************/
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,6 +27,7 @@ public class EnemyPatrol : MonoBehaviour
     private float timeStamp;
     private bool timeStampOnce;
 
+    //It calls the inicial movement direction, stores it and then starts the starting variables
     private void Start()
     {
         movementDirection = GetMovementDirection(points[0].position);
@@ -28,6 +37,7 @@ public class EnemyPatrol : MonoBehaviour
         timeStampOnce = true;
     }
 
+    //It calculates the distance between the two distances and determines what to do then, it also uses the NextMovementDirectionHandler
     private void Update()
     {
         transform.Translate(movementDirection.normalized * movementSpeed * (1 - Mathf.Exp(-smoothingSpeed *Time.fixedDeltaTime)));
@@ -35,6 +45,7 @@ public class EnemyPatrol : MonoBehaviour
         NextMovementDirectionHandler();
     }
 
+    //If the moving enemy is lesser than the stopping distance, it makes the platform stop and move to the other direction
     private void NextMovementDirectionHandler()
     {
         if (GetMovementDirection(points[pointIndex].position).magnitude < stoppingDistance)
@@ -61,6 +72,7 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    //It makes the two points visable
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -69,70 +81,9 @@ public class EnemyPatrol : MonoBehaviour
             Gizmos.DrawSphere(point.position, 0.2f);
     }
 
+    //It finds the next movement point and changes its direction
     private Vector2 GetMovementDirection(Vector2 pointPos)
     {
         return pointPos - (Vector2)transform.position;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //    public GameObject pointA;
-    //    public GameObject pointB;
-    //    private Rigidbody2D rb;
-    //    private Transform currentPoint;
-    //    public float speed;
-    //    // Start is called before the first frame update
-    //    void Start()
-    //    {
-    //        rb = GetComponent<Rigidbody2D>();
-    //        currentPoint = pointB.transform;
-    //    }
-
-    //    // Update is called once per frame
-    //    void Update()
-    //    {
-    //        Vector2 point = currentPoint.position - transform.position;
-    //        if(currentPoint == pointB.transform)
-    //        {
-    //            rb.velocity = new Vector2(speed, 0);
-    //        }
-    //        else
-    //        {
-    //            rb.velocity = new Vector2(-speed, 0);
-    //        }
-
-    //        if(Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointB.transform)
-    //        {
-    //            currentPoint = pointA.transform;
-    //        }
-    //        if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == pointA.transform)
-    //        {
-    //            currentPoint = pointB.transform;
-    //        }
-    //    }
 }
