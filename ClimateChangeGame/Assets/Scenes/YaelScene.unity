@@ -158,9 +158,9 @@ MonoBehaviour:
   - {fileID: 451838208}
   - {fileID: 1691777066}
   movementSpeed: 2
-  smoothingSpeed: 1
-  stoppingDistance: 0
-  stoppingTime: 1
+  smoothingSpeed: 2
+  stoppingDistance: 2
+  stoppingTime: 2
 --- !u!50 &76945510
 Rigidbody2D:
   serializedVersion: 4
@@ -391,7 +391,7 @@ Transform:
   m_GameObject: {fileID: 451838207}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.62, y: -3.27, z: -0.0032102754}
+  m_LocalPosition: {x: -10.93, y: -3.27, z: -0.0032102754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -644,7 +644,7 @@ Transform:
   m_GameObject: {fileID: 1691777065}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.32, y: -3.27, z: -0.0032102754}
+  m_LocalPosition: {x: 10.33, y: -3.27, z: -0.0032102754}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
