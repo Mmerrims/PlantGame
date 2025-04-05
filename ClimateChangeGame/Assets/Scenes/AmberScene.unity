@@ -1666,8 +1666,8 @@ MonoBehaviour:
   AltCanShoot: 1
   _maxShotCooldown: 0.05
   _shotCooldown: 0.05
-  _altMaxShotCooldown: 1
-  _altShotCooldown: 0.5
+  _altMaxShotCooldown: 1.5
+  _altShotCooldown: 1.5
   _maxShots: 200
   _currentShots: 200
   _maxReloadCooldown: 0.05
