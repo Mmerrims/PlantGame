@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8562349098647479669}
   - component: {fileID: 942374834871631085}
   - component: {fileID: 8197760229393205121}
+  - component: {fileID: 3029129594022658320}
   m_Layer: 0
   m_Name: PlayerBodySprites
   m_TagString: Untagged
@@ -76,7 +77,7 @@ SpriteRenderer:
   m_SortingOrder: 5
   m_Sprite: {fileID: -716530064, guid: 27d49f2dcea6cc2418cf25fce2e5f93b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 2, y: 3}
@@ -106,6 +107,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3029129594022658320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710137643321030716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e657e092d5ef7547b350e4b74f0c075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerHitboxRB2D: {fileID: 6673581670772253276}
+  _playerBodyAnims: {fileID: 8197760229393205121}
+  _playerGunAnims: {fileID: 4733725855678833244}
+  _pM: {fileID: 8084820191630248670}
 --- !u!1 &3585464196925733567
 GameObject:
   m_ObjectHideFlags: 0
