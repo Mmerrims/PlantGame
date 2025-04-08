@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3dbd09d8172eac94988956e7ab9f8129
+guid: e0e941e4298d6264eaf6ac1bb0e5c99b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WurmWalkPlant_0
+      name: WurmJump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b19ce9072519a024face0e2222a83fcb
-      internalID: -1208808340
+      spriteID: f26d00b89be5c6843b868f611ccf8d7a
+      internalID: -1347551508
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WurmWalkPlant_1
+      name: WurmJump_1
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1d10933610af7f46909c76effe60b5c
-      internalID: 1644987819
+      spriteID: d8f23486ef2808049baa95ed7ab6525b
+      internalID: 299244941
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WurmWalkPlant_2
+      name: WurmJump_2
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9059223e658857149b7dc6513c1f88e5
-      internalID: 676191653
+      spriteID: c76f6eba59716184a8024cbd788a8508
+      internalID: 653734084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WurmWalkPlant_3
+      name: WurmJump_3
       rect:
         serializedVersion: 2
         x: 192
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e34b3886074675c45ba1a4ef6dc0ee3e
-      internalID: -615459911
+      spriteID: 3c98da1ad0b4ff64fa1534fa58502e57
+      internalID: 379573100
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WurmWalkPlant_4
+      name: WurmJump_4
       rect:
         serializedVersion: 2
         x: 256
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69fec8b74364e5e49ade0e90637c530d
-      internalID: -686174919
+      spriteID: 2e20b289936b1284b8fcbba9844b7db4
+      internalID: -321837772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WurmWalkPlant_5
+      name: WurmJump_5
       rect:
         serializedVersion: 2
         x: 320
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 224b00c9f12a6934398410d56d2ef451
-      internalID: -1348651236
+      spriteID: 048c5bd3effc34c4696157a0d2338ee0
+      internalID: 1598051677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WurmWalkPlant_6
+      name: WurmJump_6
       rect:
         serializedVersion: 2
         x: 384
@@ -250,8 +250,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bc1bdd235edc1248984929cc64938d1
-      internalID: 1960780209
+      spriteID: 0f97cef8e7851e54dad89d4b25781681
+      internalID: -418696627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WurmJump_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 634d111a6c7a49c49a9738230b73327a
+      internalID: 832798413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WurmJump_8
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95e8a0f7b0c8234b8792699ca5d8760
+      internalID: 1927352831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WurmJump_9
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171c89f5cf765b340a109e11c0d3a48d
+      internalID: -1324563579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WurmJump_10
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07ed29f7812a47e4fb7957a387d9ee39
+      internalID: -1813541325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WurmJump_11
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492ab31a2543e3a4fabfb074202daa75
+      internalID: 1546645055
       vertices: []
       indices: 
       edges: []
@@ -267,13 +372,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WurmWalkPlant_0: -1208808340
-      WurmWalkPlant_1: 1644987819
-      WurmWalkPlant_2: 676191653
-      WurmWalkPlant_3: -615459911
-      WurmWalkPlant_4: -686174919
-      WurmWalkPlant_5: -1348651236
-      WurmWalkPlant_6: 1960780209
+      WurmJump_0: -1347551508
+      WurmJump_1: 299244941
+      WurmJump_10: -1813541325
+      WurmJump_11: 1546645055
+      WurmJump_2: 653734084
+      WurmJump_3: 379573100
+      WurmJump_4: -321837772
+      WurmJump_5: 1598051677
+      WurmJump_6: -418696627
+      WurmJump_7: 832798413
+      WurmJump_8: 1927352831
+      WurmJump_9: -1324563579
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
