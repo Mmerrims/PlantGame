@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlatformChecker : MonoBehaviour
@@ -15,10 +16,7 @@ public class PlatformChecker : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("OilBullet") || collision.gameObject.CompareTag("Oil"))
         {
-            if (this.gameObject != null)
-            {
-                StartCoroutine(QuickDie());
-            }
+            GoToDie();
         }
     }
 
@@ -26,10 +24,15 @@ public class PlatformChecker : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("GrassWall"))
         {
-            if (this.gameObject != null)
-            {
-                StartCoroutine(QuickDie());
-            }
+            GoToDie();
+        }
+    }
+
+    private void GoToDie()
+    {
+        if (this.gameObject != null && this.gameObject.activeSelf)
+        {
+            StartCoroutine(QuickDie());
         }
     }
 
@@ -45,6 +48,11 @@ public class PlatformChecker : MonoBehaviour
         yield return new WaitForSeconds(_shortLifeTime);
 
         Destroy(gameObject);
+    }
+
+    private void OnDestroy()
+    {
+        StopAllCoroutines();
     }
 
 }
