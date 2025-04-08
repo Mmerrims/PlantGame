@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -31,11 +31,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float _velocityY;
     [SerializeField] private float _currentDirection;
     [SerializeField] private Collider2D _collider;
-    // [SerializeField] private CheckpointManager _checkpointManager;
+    [SerializeField] private CheckpointManager _checkpointManager;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
+        _checkpointManager = FindObjectOfType<CheckpointManager>();
+        transform.position = _checkpointManager.LastCheckPointPos;
+
         //audioManagerObject = GameObject.Find("Audio Manager");
 
         _moving = false;
@@ -308,7 +311,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Restart(InputAction.CallbackContext obj)
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
         print("no restart for you hehehe");
     }
 
