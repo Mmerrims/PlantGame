@@ -272,17 +272,31 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")//Checks if the player is touching the ground
-        {
-            print("Touch Grass");
+        //if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")//Checks if the player is touching the ground
+        //{
+        //    print("Touch Grass");
 
+        //    InAir = false;
+        //    // CanDoubleJump = false;
+        //    //JumpIndicator.gameObject.SetActive(false);
+        //    Colliding++;
+        //}
+
+        //if (collision.gameObject.tag == "Oil")
+        //{
+        //    PlayerSpeed = 2;
+        //    JumpForce = 3;
+        //}
+
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        {
             InAir = false;
             // CanDoubleJump = false;
             //JumpIndicator.gameObject.SetActive(false);
             Colliding++;
         }
 
-        if (collision.gameObject.tag == "Oil")
+        if (collision.gameObject.layer == 11)
         {
             PlayerSpeed = 2;
             JumpForce = 3;
@@ -291,8 +305,25 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")
-        {//Makes the game realize the player is not touching the ground
+        //if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")
+        //{//Makes the game realize the player is not touching the ground
+        //    //print("Dont Touch Grass");
+        //    InAir = true;
+        //    // CoyoteTime = true;
+        //    // IsColliding = false;
+        //    Colliding--;
+        //    //CanDoubleJump = true;
+        //    print("Left Grass");
+        //}
+
+        //if (collision.gameObject.tag == "Oil")
+        //{
+        //    PlayerSpeed = 7;
+        //    JumpForce = 7;
+        //}
+
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        {
             //print("Dont Touch Grass");
             InAir = true;
             // CoyoteTime = true;
@@ -302,7 +333,7 @@ public class PlayerMovement : MonoBehaviour
             print("Left Grass");
         }
 
-        if (collision.gameObject.tag == "Oil")
+        if (collision.gameObject.layer == 11)
         {
             PlayerSpeed = 7;
             JumpForce = 7;
