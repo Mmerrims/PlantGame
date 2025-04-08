@@ -14,7 +14,7 @@ public class BlockTransform : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if (_oil == true && collision.gameObject.CompareTag("Grass") || _ground == true && collision.gameObject.CompareTag("Grass"))
+        if (_oil == true && collision.gameObject.CompareTag("grass") || _ground == true && collision.gameObject.CompareTag("grass"))
         {
             _health -= 1;
             Destroy(collision.gameObject);
