@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1926896619083181961}
   - component: {fileID: 4161211934302776820}
   - component: {fileID: -596097115978389634}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right Wall
   m_TagString: GrassWall
   m_Icon: {fileID: 0}
