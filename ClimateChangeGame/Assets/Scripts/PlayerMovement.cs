@@ -330,7 +330,7 @@ public class PlayerMovement : MonoBehaviour
             // IsColliding = false;
             Colliding--;
             //CanDoubleJump = true;
-            print("Left Grass");
+            print("Left grass");
         }
 
         if (collision.gameObject.layer == 11)
