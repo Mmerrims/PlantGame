@@ -288,7 +288,7 @@ public class PlayerMovement : MonoBehaviour
         //    JumpForce = 3;
         //}
 
-        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
         {
             InAir = false;
             // CanDoubleJump = false;
@@ -322,7 +322,7 @@ public class PlayerMovement : MonoBehaviour
         //    JumpForce = 7;
         //}
 
-        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11)
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
         {
             //print("Dont Touch Grass");
             InAir = true;
