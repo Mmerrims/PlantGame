@@ -327,7 +327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5302910800254186590, guid: 4321733228d197e4bb188049b1173644, type: 3}
   bulletPos: {fileID: 225238992}
-  shootDistance: 8
+  shootDistance: 15
 --- !u!1 &950399585
 GameObject:
   m_ObjectHideFlags: 0
