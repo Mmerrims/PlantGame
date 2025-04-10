@@ -544,7 +544,7 @@ Transform:
   m_GameObject: {fileID: 1171783618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.11, y: 0, z: -10}
+  m_LocalPosition: {x: -2.18, y: 0.74, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -822,7 +822,7 @@ Transform:
   m_GameObject: {fileID: 1715050245}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.6, y: -2.3, z: 0}
+  m_LocalPosition: {x: -8.67, y: -2.34, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -876,9 +876,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4727374576410098813, guid: 7e42770f5238a5e48ae8133d2d41b62b, type: 3}
+      propertyPath: shootMoveRadius
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5837992268018953718, guid: 7e42770f5238a5e48ae8133d2d41b62b, type: 3}
       propertyPath: m_Name
       value: Patrolling Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8926962482985898802, guid: 7e42770f5238a5e48ae8133d2d41b62b, type: 3}
+      propertyPath: m_Constraints
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

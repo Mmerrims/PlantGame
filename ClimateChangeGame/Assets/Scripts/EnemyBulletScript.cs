@@ -12,11 +12,19 @@ public class EnemyBulletScript : MonoBehaviour
     [SerializeField] private float despawnTime = 6;
     [SerializeField] private float yoffset = 0;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        yoffset = 2f;
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
+
+    }
+
+    public void shoot(GameObject player)
+    {
+        if(rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+        this.player = player;
 
         Vector3 direction = player.transform.position - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y + yoffset).normalized * force;
