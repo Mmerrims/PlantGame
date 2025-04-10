@@ -1202,7 +1202,7 @@ ParticleSystem:
   simulationSpeed: 0.5
   stopAction: 0
   cullingMode: 0
-  ringBufferMode: 0
+  ringBufferMode: 1
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
