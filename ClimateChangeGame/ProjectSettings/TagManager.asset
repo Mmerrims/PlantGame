@@ -23,9 +23,9 @@ TagManager:
   - EnemyBullet
   - Enemy
   - Rope
-  - 
-  - 
-  - 
+  - Ground
+  - GroundOil
+  - GroundGrass
   - 
   - 
   - 

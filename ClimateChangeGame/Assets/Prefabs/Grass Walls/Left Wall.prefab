@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4402188631213155545}
   - component: {fileID: 2111514856789059212}
   - component: {fileID: 3779277950636560587}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left Wall
   m_TagString: GrassWall
   m_Icon: {fileID: 0}
