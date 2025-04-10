@@ -322,11 +322,10 @@ MonoBehaviour:
   InAir: 0
   _self: {fileID: 5701434493954349191}
   _moving: 0
-  JumpForce: 7
+  JumpForce: 1
   PerformLaunch: 0
   Colliding: 0
   _pAnims: {fileID: 3029129594022658320}
-  _pGunAnims: {fileID: 0}
   _velocityX: 0
   _velocityY: 0
   _currentDirection: 0
@@ -400,7 +399,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 70f5ec521d9c6d34cb9f40aa7fc06111, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
