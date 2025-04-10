@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerGunAnimations : MonoBehaviour
 {
     [SerializeField] private Animator _anim;
+    [SerializeField] private Transform _transform;
     
 
     public void StartShoot()
@@ -18,4 +19,8 @@ public class PlayerGunAnimations : MonoBehaviour
         _anim.Play("WurmGunShootEndNormal");
     }
 
+    private void FixedUpdate()
+    {
+        gameObject.transform.rotation = _transform.rotation;
+    }
 }
