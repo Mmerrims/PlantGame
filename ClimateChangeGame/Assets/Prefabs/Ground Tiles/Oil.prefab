@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 9155260042561072644}
   m_Layer: 11
   m_Name: Oil
-  m_TagString: Oil
+  m_TagString: Oil2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
