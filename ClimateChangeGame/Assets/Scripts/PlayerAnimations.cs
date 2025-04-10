@@ -32,6 +32,7 @@ public class PlayerAnimations : MonoBehaviour
     {
         _playerBodyAnims.Play("WurmJumpStart");
         Invoke("StartJump", 0.25f);
+        SetGrounded(false);
     }
 
     /// <summary>
@@ -54,7 +55,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (_playerHitboxRB2D.velocity.x > 0)
+        if (_playerHitboxRB2D.velocity.x != 0)
         {
             SetMoving(true);
         }
