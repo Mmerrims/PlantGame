@@ -64,13 +64,17 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnDisable()
     {
-        MPI.currentActionMap.Disable();
-        move.started -= Handle_MoveStarted;
-        move.canceled -= Handle_MoveCanceled;
-        jump.started -= Handle_JumpAction;
-        jump.canceled -= Handle_JumpActionCanceled;
-        restart.started -= Restart;
-        quit.started -= Quit;
+        if (MPI != false)
+        {
+            MPI.currentActionMap.Disable();
+            move.started -= Handle_MoveStarted;
+            move.canceled -= Handle_MoveCanceled;
+            jump.started -= Handle_JumpAction;
+            jump.canceled -= Handle_JumpActionCanceled;
+            restart.started -= Restart;
+            quit.started -= Quit;
+        }
+        
     }
 
     private void Handle_JumpAction(InputAction.CallbackContext obj)
@@ -125,12 +129,29 @@ public class PlayerMovement : MonoBehaviour
 
     private void Handle_JumpActionCanceled(InputAction.CallbackContext context)
     {
-
+        print("AAAAAAAAAAA");
+        //if (PlayerRB.velocity.y > 0f)
+        //{
+            Invoke("StopJump", .4f);
+        //PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
+        // }
         if (PlayerRB.velocity.y > 0f)
         {
             PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
         }
 
+    }
+
+    public void StopJump()
+    {
+        print("STOP");
+        // PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.25f);
+        if (PlayerRB.velocity.y > 0f)
+        {
+            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
+        }
+
+        //PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, 0);
     }
 
     //private void Handle_ToMenuPerformed(InputAction.CallbackContext context)
@@ -313,7 +334,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             PlayerSpeed = 2;
-            JumpForce = 3;
+            JumpForce = .5f;
         }
     }
 
@@ -350,7 +371,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.layer == 11)
         {
             PlayerSpeed = 7;
-            JumpForce = 7;
+            JumpForce = 1f;
         }
     }
 
