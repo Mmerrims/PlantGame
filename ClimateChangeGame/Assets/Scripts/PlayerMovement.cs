@@ -204,16 +204,20 @@ public class PlayerMovement : MonoBehaviour
 
     public void PerformJump()
     {
-        if (transform.parent != null)
-        {
-            PlayerRB.velocity = new Vector2(transform.parent.GetComponent<Rigidbody2D>().velocity.x, JumpForce + transform.parent.GetComponent<Rigidbody2D>().velocity.y);
+        //if (transform.parent != null)
+        //{
+
+        //    PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, JumpForce + PlayerRB.velocity.y);
+        //    coyoteTimeCounter = 0;
+        //}
+        //else
+        //{
+            print("WTF");
+            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, JumpForce + PlayerRB.velocity.y);
             coyoteTimeCounter = 0;
-        }
-        else
-        {
-            PlayerRB.velocity = new Vector2(0, JumpForce);
-            coyoteTimeCounter = 0;
-        }
+        //}
+
+
 
         playerJump = false;
         PerformLaunch = false;
