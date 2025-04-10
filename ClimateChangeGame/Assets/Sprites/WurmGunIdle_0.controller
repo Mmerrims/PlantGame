@@ -10,7 +10,8 @@ AnimatorState:
   m_Name: WurmGunShootEndNormal
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions: []
+  m_Transitions:
+  - {fileID: 8630098191676156682}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -37,16 +38,16 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 4991696930858441619}
-    m_Position: {x: 200, y: 0, z: 0}
+    m_Position: {x: 190, y: 80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1053976213155344086}
-    m_Position: {x: 235, y: 65, z: 0}
+    m_Position: {x: 460, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1466180713887854514}
-    m_Position: {x: 270, y: 130, z: 0}
+    m_Position: {x: 420, y: 100, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7065706953210879272}
-    m_Position: {x: 305, y: 195, z: 0}
+    m_Position: {x: 430, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -180,3 +181,25 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &8630098191676156682
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions: []
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 4991696930858441619}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0.26132387
+  m_ExitTime: 0.9740261
+  m_HasExitTime: 1
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
