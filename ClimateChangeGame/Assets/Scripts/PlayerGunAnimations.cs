@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerGunAnimations : MonoBehaviour
 {
     [SerializeField] private Animator _anim;
-    [SerializeField] private Transform _transform;
+    [SerializeField] private Transform _transform1;
+    [SerializeField] private Transform _transform2;
     
 
     public void StartShoot()
@@ -21,6 +22,6 @@ public class PlayerGunAnimations : MonoBehaviour
 
     private void FixedUpdate()
     {
-        gameObject.transform.rotation = _transform.rotation;
+        _transform1.rotation = _transform2.rotation;
     }
 }
