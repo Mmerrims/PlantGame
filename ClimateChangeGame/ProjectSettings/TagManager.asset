@@ -12,6 +12,7 @@ TagManager:
   - GrassWall
   - OilBullet
   - Oil2
+  - Oil3
   layers:
   - Default
   - TransparentFX
