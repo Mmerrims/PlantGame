@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -25,17 +25,22 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce;
     public bool PerformLaunch;
     public int Colliding;
+
+    [SerializeField] private PlayerAnimations _pAnims;
     //[SerializeField] private Animator _animator;
 
     [SerializeField] private float _velocityX;
     [SerializeField] private float _velocityY;
     [SerializeField] private float _currentDirection;
     [SerializeField] private Collider2D _collider;
-    // [SerializeField] private CheckpointManager _checkpointManager;
+    [SerializeField] private CheckpointManager _checkpointManager;
     [SerializeField] private SpriteRenderer _spriteRenderer;
 
     private void Awake()
     {
+        _checkpointManager = FindObjectOfType<CheckpointManager>();
+        transform.position = _checkpointManager.LastCheckPointPos;
+
         //audioManagerObject = GameObject.Find("Audio Manager");
 
         _moving = false;
@@ -192,24 +197,31 @@ public class PlayerMovement : MonoBehaviour
 
         if (CanMove == true && PerformLaunch == true && playerJump == true)
         {
-
-            if (transform.parent != null)
-            {
-                PlayerRB.velocity = new Vector2(transform.parent.GetComponent<Rigidbody2D>().velocity.x, JumpForce + transform.parent.GetComponent<Rigidbody2D>().velocity.y);
-                coyoteTimeCounter = 0;
-            }
-            else
-            {
-                PlayerRB.velocity = new Vector2(0, JumpForce);
-                coyoteTimeCounter = 0;
-            }
-
-            playerJump = false;
-            PerformLaunch = false;
-
-            InAir = true;
+            _pAnims.StartJumpAnim();
+            Invoke("PerformJump", 0.25f);
         }
     }
+
+    public void PerformJump()
+    {
+        if (transform.parent != null)
+        {
+            PlayerRB.velocity = new Vector2(transform.parent.GetComponent<Rigidbody2D>().velocity.x, JumpForce + transform.parent.GetComponent<Rigidbody2D>().velocity.y);
+            coyoteTimeCounter = 0;
+        }
+        else
+        {
+            PlayerRB.velocity = new Vector2(0, JumpForce);
+            coyoteTimeCounter = 0;
+        }
+
+        playerJump = false;
+        PerformLaunch = false;
+
+        InAir = true;
+    }
+
+
     // Update is called once per frame
     public void Update()
     {
@@ -269,17 +281,32 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")//Checks if the player is touching the ground
-        {
-            print("Touch Grass");
+        //if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")//Checks if the player is touching the ground
+        //{
+        //    print("Touch Grass");
 
+        //    InAir = false;
+        //    // CanDoubleJump = false;
+        //    //JumpIndicator.gameObject.SetActive(false);
+        //    Colliding++;
+        //}
+
+        //if (collision.gameObject.tag == "Oil")
+        //{
+        //    PlayerSpeed = 2;
+        //    JumpForce = 3;
+        //}
+
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
+        {
+            _pAnims.SetGrounded(true);
             InAir = false;
             // CanDoubleJump = false;
             //JumpIndicator.gameObject.SetActive(false);
             Colliding++;
         }
 
-        if (collision.gameObject.tag == "Oil")
+        if (collision.gameObject.layer == 11)
         {
             PlayerSpeed = 2;
             JumpForce = 3;
@@ -288,18 +315,35 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")
-        {//Makes the game realize the player is not touching the ground
+        //if (collision.gameObject.tag == "Ground" || collision.gameObject.tag == "GrassGround" || collision.gameObject.tag == "Oil" || collision.gameObject.tag == "GrassWall")
+        //{//Makes the game realize the player is not touching the ground
+        //    //print("Dont Touch Grass");
+        //    InAir = true;
+        //    // CoyoteTime = true;
+        //    // IsColliding = false;
+        //    Colliding--;
+        //    //CanDoubleJump = true;
+        //    print("Left Grass");
+        //}
+
+        //if (collision.gameObject.tag == "Oil")
+        //{
+        //    PlayerSpeed = 7;
+        //    JumpForce = 7;
+        //}
+
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
+        {
             //print("Dont Touch Grass");
             InAir = true;
             // CoyoteTime = true;
             // IsColliding = false;
             Colliding--;
             //CanDoubleJump = true;
-            print("Left Grass");
+            print("Left grass");
         }
 
-        if (collision.gameObject.tag == "Oil")
+        if (collision.gameObject.layer == 11)
         {
             PlayerSpeed = 7;
             JumpForce = 7;
@@ -308,7 +352,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void Restart(InputAction.CallbackContext obj)
     {
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        
         print("no restart for you hehehe");
     }
 

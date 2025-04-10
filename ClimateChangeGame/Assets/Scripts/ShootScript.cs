@@ -35,9 +35,12 @@ public class ShootScript : MonoBehaviour
 
     [SerializeField] private bool _alt;
 
+    [SerializeField] private PlayerGunAnimations _pGunAnims;
+
     // [SerializeField] private GameManager _gameManager;
 
     private bool shooting;
+    private bool shootLock;
     public bool EndShooting;
 
     private Vector2 direction;
@@ -75,16 +78,30 @@ public class ShootScript : MonoBehaviour
 
     private void ShootStart(InputAction.CallbackContext obj)
     {
-        shooting = true;
-        _alt = false;
+        shootLock = false;
+        Invoke("PerformShoot", 0.15f);
+        _pGunAnims.StartShoot();
     }
+
+    public void PerformShoot()
+    {
+        if (!shootLock)
+        {
+            shooting = true;
+            _alt = false;
+        }
+    }
+
     private void ShootCancel(InputAction.CallbackContext obj)
     {
+        shootLock = true;
         shooting = false;
+        _pGunAnims.EndShoot();
     }
 
     private void ShootAltStart(InputAction.CallbackContext obj)
     {
+        shootLock = false;
         shooting = true;
         _alt = true;
     }

@@ -11,6 +11,7 @@ TagManager:
   - BigGrass
   - GrassWall
   - OilBullet
+  - Oil2
   layers:
   - Default
   - TransparentFX
@@ -21,11 +22,11 @@ TagManager:
   - PlayerBullet
   - EnemyBullet
   - Enemy
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Rope
+  - Ground
+  - GroundOil
+  - GroundGrass
+  - Death
   - 
   - 
   - 

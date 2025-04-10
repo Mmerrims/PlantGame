@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 4953034047626689944}
   - component: {fileID: 537280664205159443}
   - component: {fileID: 9155260042561072644}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Oil
   m_TagString: Oil
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5004464218086991545
 Transform:
