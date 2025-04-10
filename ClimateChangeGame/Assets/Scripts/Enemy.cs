@@ -20,12 +20,21 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float smoothingSpeed;
     [SerializeField] private float stoppingDistance;
     [SerializeField] private float stoppingTime;
+    [SerializeField] private float shootingMovementSpeed;
+    [SerializeField] private float shootMoveRadius;
 
     [Tooltip("Private Variables")]
     private Vector2 movementDirection;
     private int pointIndex;
     private float timeStamp;
     private bool timeStampOnce;
+
+    private EnemyShooting shootingScript = null;
+
+    private void Awake()
+    {
+        shootingScript = GetComponent<EnemyShooting>();
+    }
 
     //It calls the inicial movement direction, stores it and then starts the starting variables
     private void Start()
@@ -40,10 +49,38 @@ public class EnemyPatrol : MonoBehaviour
     //It calculates the distance between the two distances and determines what to do then, it also uses the NextMovementDirectionHandler
     private void Update()
     {
-        transform.Translate(movementDirection.normalized * movementSpeed * (1 - Mathf.Exp(-smoothingSpeed *Time.fixedDeltaTime)));
+        if (shootingScript != null && shootingScript.IsTargetInRange)
+        {
+             shootMove();
+        }
+        else
+        {
+             Move();
+        }
+        
+       
+    }
+
+    private void shootMove()
+    {
+        float distance = Vector2.Distance(transform.position, shootingScript.Player.transform.position);
+        if (distance < shootMoveRadius)
+        {
+            float diff = transform.position.x - shootingScript.Player.transform.position.x;
+            transform.Translate(Vector3.right * diff * shootingMovementSpeed * (1 - Mathf.Exp(-smoothingSpeed * Time.fixedDeltaTime)));
+        }
+        
+
+
+    }
+
+    private void Move()
+    {
+        transform.Translate(movementDirection.normalized * movementSpeed * (1 - Mathf.Exp(-smoothingSpeed * Time.fixedDeltaTime)));
 
         NextMovementDirectionHandler();
     }
+
 
     //If the moving enemy is lesser than the stopping distance, it makes the platform stop and move to the other direction
     private void NextMovementDirectionHandler()

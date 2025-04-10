@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce;
     public bool PerformLaunch;
     public int Colliding;
+
+    [SerializeField] private PlayerAnimations _pAnims;
     //[SerializeField] private Animator _animator;
 
     [SerializeField] private float _velocityX;
@@ -195,24 +197,31 @@ public class PlayerMovement : MonoBehaviour
 
         if (CanMove == true && PerformLaunch == true && playerJump == true)
         {
-
-            if (transform.parent != null)
-            {
-                PlayerRB.velocity = new Vector2(transform.parent.GetComponent<Rigidbody2D>().velocity.x, JumpForce + transform.parent.GetComponent<Rigidbody2D>().velocity.y);
-                coyoteTimeCounter = 0;
-            }
-            else
-            {
-                PlayerRB.velocity = new Vector2(0, JumpForce);
-                coyoteTimeCounter = 0;
-            }
-
-            playerJump = false;
-            PerformLaunch = false;
-
-            InAir = true;
+            _pAnims.StartJumpAnim();
+            Invoke("PerformJump", 0.25f);
         }
     }
+
+    public void PerformJump()
+    {
+        if (transform.parent != null)
+        {
+            PlayerRB.velocity = new Vector2(transform.parent.GetComponent<Rigidbody2D>().velocity.x, JumpForce + transform.parent.GetComponent<Rigidbody2D>().velocity.y);
+            coyoteTimeCounter = 0;
+        }
+        else
+        {
+            PlayerRB.velocity = new Vector2(0, JumpForce);
+            coyoteTimeCounter = 0;
+        }
+
+        playerJump = false;
+        PerformLaunch = false;
+
+        InAir = true;
+    }
+
+
     // Update is called once per frame
     public void Update()
     {
@@ -290,6 +299,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
         {
+            _pAnims.SetGrounded(true);
             InAir = false;
             // CanDoubleJump = false;
             //JumpIndicator.gameObject.SetActive(false);

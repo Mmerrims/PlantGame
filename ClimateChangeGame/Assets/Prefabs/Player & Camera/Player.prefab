@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: 0.025, y: 0.005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6144873667789592986}
   m_Father: {fileID: 5701434493954349191}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &942374834871631085
@@ -147,13 +148,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3585464196925733567}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.36, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.025, y: 0.379, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8653982133716683269}
-  m_Father: {fileID: 5701434493954349191}
+  m_Father: {fileID: 8562349098647479669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5078666584164892811
 GameObject:
@@ -167,7 +168,7 @@ GameObject:
   - component: {fileID: 4811352934936167179}
   - component: {fileID: 4733725855678833244}
   m_Layer: 0
-  m_Name: WurmGunIdle_0
+  m_Name: GunSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -182,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 5078666584164892811}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.592, y: -0.028000116, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.028000116, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -231,7 +232,7 @@ SpriteRenderer:
   m_SortingOrder: 1
   m_Sprite: {fileID: 347557864, guid: 98c162b90e2d7e442b63bf4aff8051d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1.2708334, y: 0.5}
@@ -297,7 +298,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8562349098647479669}
-  - {fileID: 6144873667789592986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8084820191630248670
@@ -325,6 +325,8 @@ MonoBehaviour:
   JumpForce: 7
   PerformLaunch: 0
   Colliding: 0
+  _pAnims: {fileID: 3029129594022658320}
+  _pGunAnims: {fileID: 0}
   _velocityX: 0
   _velocityY: 0
   _currentDirection: 0
