@@ -58,6 +58,11 @@ public class PlayerHealth : MonoBehaviour
         {
             _health -= 1;
         }
+
+        if (collision.gameObject.layer == 8)
+        {
+            _health -= 1;
+        }
     }
 
     //private void OnCollisionExit2D(Collision2D collision)
