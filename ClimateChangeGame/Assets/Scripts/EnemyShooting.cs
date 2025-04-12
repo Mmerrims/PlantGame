@@ -6,6 +6,7 @@ public class EnemyShooting : MonoBehaviour
 {
     public GameObject bullet;
     public Transform bulletPos;
+    [SerializeField] private float Health = 5f;
 
 
     private float timer;
@@ -37,7 +38,19 @@ public class EnemyShooting : MonoBehaviour
             }
         }
 
-        
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            Health -= 1;
+        }
     }
 
     //It finds the distance of the player and shoots at their position

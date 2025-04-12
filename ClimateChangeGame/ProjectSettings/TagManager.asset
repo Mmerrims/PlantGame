@@ -13,6 +13,7 @@ TagManager:
   - OilBullet
   - Oil2
   - Oil3
+  - Enemy
   layers:
   - Default
   - TransparentFX

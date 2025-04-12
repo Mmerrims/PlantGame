@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 8074455859012260024}
   m_Layer: 8
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,7 +193,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!114 &4727374576410098813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,8 +215,7 @@ MonoBehaviour:
   stoppingTime: 2
   shootingMovementSpeed: 1
   shootMoveRadius: 0
-  Health: 5
-  rb: {fileID: 8926962482985898802}
+  Health: 25
 --- !u!114 &8074455859012260024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5302910800254186590, guid: 4321733228d197e4bb188049b1173644, type: 3}
   bulletPos: {fileID: 7391449668378247861}
+  Health: 5
   shootDistance: 4
 --- !u!1 &3037304659754277598
 GameObject:
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 2358735882925152644}
   m_Layer: 8
   m_Name: Patrolling Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

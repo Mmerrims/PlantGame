@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7075236236915988098}
   m_Layer: 8
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &7075236236915988098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5302910800254186590, guid: 4321733228d197e4bb188049b1173644, type: 3}
   bulletPos: {fileID: 5337110861108316299}
+  Health: 50
   shootDistance: 8
 --- !u!1 &8709771898328707122
 GameObject:
