@@ -25,7 +25,7 @@ public class EnemyShooting : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, Player.transform.position);
         IsTargetInRange = distance < shootDistance;
-        Debug.Log(distance);
+        //Debug.Log(distance);
 
         if(IsTargetInRange)
         {
