@@ -55,29 +55,29 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
-        {
-            grounded = false;
-        }
-    }
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
+    //    {
+    //        grounded = false;
+    //    }
+    //}
 
     private void Update()
     {
         _healthText.text = ("" + _health);
 
-        if (grounded)
-        {
+        //if (grounded)
+        //{
             if (grass)
             {
                 _health += _grassHealing * Time.deltaTime;
             }
-            else if (oil)
+            if (oil)
             {
                 _health -= _oilDamage * Time.deltaTime;
             }
-            else
+            if (!oil && !grass)
             {
                 _health += _groundHealing * Time.deltaTime;
             }
@@ -90,6 +90,6 @@ public class PlayerHealth : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-        }
+       // }
     }
 }

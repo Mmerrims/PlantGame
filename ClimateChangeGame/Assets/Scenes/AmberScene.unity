@@ -896,7 +896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &96865583
 Rigidbody2D:
   serializedVersion: 4
@@ -9394,6 +9394,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4601193385762020969, guid: afb614bd1bb87e3448e4233a0a8b2a37, type: 3}
+      propertyPath: _groundHealing
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 5701434493954349191, guid: afb614bd1bb87e3448e4233a0a8b2a37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9465,6 +9469,10 @@ PrefabInstance:
     - target: {fileID: 2408275758671789000, guid: 11bd3c41f11812a4f9daf73f5c3e0624, type: 3}
       propertyPath: m_Name
       value: Killbox
+      objectReference: {fileID: 0}
+    - target: {fileID: 2408275758671789000, guid: 11bd3c41f11812a4f9daf73f5c3e0624, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6107784281460544378, guid: 11bd3c41f11812a4f9daf73f5c3e0624, type: 3}
       propertyPath: m_LocalPosition.x
