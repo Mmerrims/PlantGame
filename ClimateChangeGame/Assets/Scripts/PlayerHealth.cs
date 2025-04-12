@@ -56,12 +56,12 @@ public class PlayerHealth : MonoBehaviour
 
         if (collision.gameObject.layer == 7)
         {
-            _health -= 1;
+            _health -= 3;
         }
 
         if (collision.gameObject.layer == 8)
         {
-            _health -= 1;
+            _health -= 3;
         }
     }
 
