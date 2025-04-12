@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4544916949753072489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8926962482985898802}
   - component: {fileID: 4727374576410098813}
   - component: {fileID: 8074455859012260024}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,6 +214,9 @@ MonoBehaviour:
   stoppingDistance: 2
   stoppingTime: 2
   shootingMovementSpeed: 1
+  shootMoveRadius: 0
+  Health: 5
+  rb: {fileID: 8926962482985898802}
 --- !u!114 &8074455859012260024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7391449668378247861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2358735882925152644}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Patrolling Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7478687693489441030}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8157140558520849671}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
