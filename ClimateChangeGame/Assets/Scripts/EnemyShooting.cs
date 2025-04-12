@@ -40,6 +40,7 @@ public class EnemyShooting : MonoBehaviour
         
     }
 
+    //It finds the distance of the player and shoots at their position
     void shoot()
     {
         GameObject bulletObj = Instantiate(bullet, bulletPos.position, Quaternion.identity);

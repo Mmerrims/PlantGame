@@ -22,6 +22,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float stoppingTime;
     [SerializeField] private float shootingMovementSpeed;
     [SerializeField] private float shootMoveRadius;
+    [SerializeField] private float Health = 5f;
 
     [Tooltip("Private Variables")]
     private Vector2 movementDirection;
@@ -51,14 +52,27 @@ public class EnemyPatrol : MonoBehaviour
     {
         if (shootingScript != null && shootingScript.IsTargetInRange)
         {
-             shootMove();
+            shootMove();
         }
         else
         {
-             Move();
+            Move();
         }
-        
-       
+
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            Health -= 1;
+        }
     }
 
     private void shootMove()

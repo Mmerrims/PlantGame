@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4907560696215524104}
   - component: {fileID: 233652259625746146}
   - component: {fileID: 7075236236915988098}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5337110861108316299}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BulletPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
