@@ -54,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
-        if (collision.gameObject.layer == 14)
+        if (collision.gameObject.layer == 7)
         {
             _health -= 1;
         }
