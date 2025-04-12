@@ -271,6 +271,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5701434493954349191}
+  - component: {fileID: 4601193385762020969}
   - component: {fileID: 8084820191630248670}
   - component: {fileID: 4082926378535557786}
   - component: {fileID: 6673581670772253276}
@@ -300,6 +301,28 @@ Transform:
   - {fileID: 8562349098647479669}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4601193385762020969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141914416184911854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36df41f58ee7e74383e35cba7b72b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 10
+  _maxHealth: 10
+  _oilDamage: 1
+  _groundHealing: 1
+  _grassHealing: 2
+  grass: 0
+  oil: 0
+  grounded: 0
+  _healthTextObject: {fileID: 0}
+  _healthText: {fileID: 0}
 --- !u!114 &8084820191630248670
 MonoBehaviour:
   m_ObjectHideFlags: 0
