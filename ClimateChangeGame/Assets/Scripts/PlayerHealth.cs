@@ -53,6 +53,11 @@ public class PlayerHealth : MonoBehaviour
             _health = 0;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
+        if (collision.gameObject.layer == 7)
+        {
+            _health -= 1;
+        }
     }
 
     //private void OnCollisionExit2D(Collision2D collision)
