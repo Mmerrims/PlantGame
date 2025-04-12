@@ -332,8 +332,8 @@ MonoBehaviour:
   _health: 10
   _maxHealth: 10
   _oilDamage: 1
-  _groundHealing: 1
-  _grassHealing: 2
+  _groundHealing: 0.25
+  _grassHealing: 1
   grass: 0
   oil: 0
   grounded: 0
