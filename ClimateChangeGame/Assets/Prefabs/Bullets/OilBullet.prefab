@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4948527062829954406}
   - component: {fileID: 5764072418521178905}
   - component: {fileID: 7241864158892999974}
-  m_Layer: 8
+  m_Layer: 14
   m_Name: OilBullet
   m_TagString: OilBullet
   m_Icon: {fileID: 0}
