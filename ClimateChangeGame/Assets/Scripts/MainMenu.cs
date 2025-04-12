@@ -26,4 +26,9 @@ public class MainMenu : MonoBehaviour
         //Not added yet since we don't have a controls scene yet
         Debug.Log("Control Button Activated");
     }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

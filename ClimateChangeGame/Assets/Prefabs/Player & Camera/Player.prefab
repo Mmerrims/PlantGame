@@ -166,6 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8653982133716683269}
   - component: {fileID: 4811352934936167179}
+  - component: {fileID: 4281595681578487150}
   - component: {fileID: 4733725855678833244}
   m_Layer: 0
   m_Name: GunSprite
@@ -241,6 +242,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &4281595681578487150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5078666584164892811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729b5ec37ae17cd4d81b36788721b179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _anim: {fileID: 0}
+  _transform1: {fileID: 0}
+  _transform2: {fileID: 0}
 --- !u!95 &4733725855678833244
 Animator:
   serializedVersion: 5
