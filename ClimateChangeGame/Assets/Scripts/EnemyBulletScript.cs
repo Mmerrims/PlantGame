@@ -1,3 +1,12 @@
+/*****************************************************************************
+// File Name :         Enemy Bullet Script.cs
+// Author :            Yael Martoral
+// Creation Date :     April 5th, 2025
+//
+// Brief Description : Controls the bullet and how it behaves when it launches
+                       what happens when it collides with the player
+*****************************************************************************/
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,13 +20,14 @@ public class EnemyBulletScript : MonoBehaviour
     private float timer;
     [SerializeField] private float despawnTime = 6;
     [SerializeField] private float yoffset = 0;
-    // Start is called before the first frame update
+    // It gets the it's own rigid bodies in the beggining
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
     }
 
+    // It calculates the trajectory between the player and itself and goes towards the player
     public void shoot(GameObject player)
     {
         if(rb == null)
@@ -33,7 +43,7 @@ public class EnemyBulletScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rot + 90);
     }
 
-    // Update is called once per frame
+    // After a bit of time when the bullet does not make contact with anything, it deletes itself
     void Update()
     {
         timer += Time.deltaTime;
@@ -44,6 +54,7 @@ public class EnemyBulletScript : MonoBehaviour
         }
     }
 
+    // Once the bullet enters a trigger, it destroys itself
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
