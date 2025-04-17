@@ -1,3 +1,11 @@
+/*****************************************************************************
+// File Name :         Enemy Shooting.cs
+// Author :            Yael Martoral
+// Creation Date :     April 5th, 2025
+//
+// Brief Description : It calculates the distance between the enemy and the
+                       player and shoots a bullet at their direction
+*****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,13 +21,13 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private float shootDistance = 6;
     public bool IsTargetInRange { get; private set; } = false;
     public GameObject Player { get; private set; } = null;
-    // Start is called before the first frame update
+    // It finds any objects with the "Player" tag
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
+    // It sets a range around the enemy that when the player enters it, it shoots bullets within a certain time limit of eachother
     void Update()
     {
 
@@ -45,6 +53,7 @@ public class EnemyShooting : MonoBehaviour
 
     }
 
+    // Once an objects collides with the enenmy, it reduces it's health
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == 6)
