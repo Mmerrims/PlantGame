@@ -219,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         if (CanMove == true && PerformLaunch == true && playerJump == true)
         {
             _pAnims.StartJumpAnim();
-            Invoke("PerformJump", 0.25f);
+            Invoke("PerformJump", 0.05f);
         }
     }
 
