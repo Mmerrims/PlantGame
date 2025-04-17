@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform _self;
     [SerializeField] private bool _moving;
     private bool playerJump;
+    private bool canJump;
     public float JumpForce;
     public bool PerformLaunch;
     public int Colliding;
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         transform.position = _checkpointManager.LastCheckPointPos;
 
         //audioManagerObject = GameObject.Find("Audio Manager");
-
+        canJump = true;
         _moving = false;
         PlayerRB = GetComponent<Rigidbody2D>();
         MPI = GetComponent<PlayerInput>();
@@ -150,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
         }
-
+        canJump = true;
         //PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, 0);
     }
 
@@ -216,10 +217,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (CanMove == true && PerformLaunch == true && playerJump == true)
+        if (CanMove == true && PerformLaunch == true && playerJump == true && canJump == true)
         {
+            print("jumpAnimGo");
             _pAnims.StartJumpAnim();
-            Invoke("PerformJump", 0.05f);
+            //Invoke("PerformJump", 0.05f);
+            canJump = false;
         }
     }
 
@@ -233,8 +236,10 @@ public class PlayerMovement : MonoBehaviour
         //}
         //else
         //{
+        _pAnims.ContinueJumpAnim();
+
             print("WTF");
-            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, JumpForce + PlayerRB.velocity.y);
+        PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, JumpForce * 10 + PlayerRB.velocity.y);
             coyoteTimeCounter = 0;
         //}
 
@@ -242,6 +247,7 @@ public class PlayerMovement : MonoBehaviour
 
         playerJump = false;
         PerformLaunch = false;
+        canJump = true;
 
         InAir = true;
     }
