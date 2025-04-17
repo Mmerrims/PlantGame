@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  force: 10
+  force: 18
   despawnTime: 4
   yoffset: 2
 --- !u!61 &-7678559921020263285
