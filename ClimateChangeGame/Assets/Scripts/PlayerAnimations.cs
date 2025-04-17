@@ -35,6 +35,11 @@ public class PlayerAnimations : MonoBehaviour
         SetGrounded(false);
     }
 
+    public void ContinueJumpAnim()
+    {
+        _playerBodyAnims.Play("WurmJumpAscendLoop");
+    }
+
     /// <summary>
     /// CALL THIS WHEN A PLAYER BEGINS ASCENDING
     /// </summary>

@@ -2360,7 +2360,7 @@ MonoBehaviour:
   _altBullet: {fileID: 5978619915082326378, guid: 09a1043206baa684b89ce2901d46a555, type: 3}
   _player: {fileID: 0}
   _bulletSpawn: {fileID: 991194282678671885}
-  _bulletSpeed: 40
+  _bulletSpeed: 80
   _altBulletSpeed: 30
   MPI: {fileID: 0}
   CanShoot: 1
@@ -2378,6 +2378,7 @@ MonoBehaviour:
   _altMaxReloadCooldown: 0.1
   _altReloadCooldown: 0.1
   _alt: 0
+  _pGunAnims: {fileID: 0}
   EndShooting: 0
 --- !u!212 &7493969225422413066
 SpriteRenderer:
