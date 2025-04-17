@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
         {
             PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
         }
-        canJump = true;
+        //canJump = true;
         //PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, 0);
     }
 
@@ -182,17 +182,17 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-        if (coyoteTimeCounter > 0f)
-        {
-            //Checks if the player is colliding with something, and if so turns off InAir and makes sure the double jump doesn't occur
-            //DoubleJump = false;
-            InAir = false;
+        //if (coyoteTimeCounter > 0f)
+        //{
+        //    //Checks if the player is colliding with something, and if so turns off InAir and makes sure the double jump doesn't occur
+        //    //DoubleJump = false;
+        //    InAir = false;
 
-            //Animator.SetBool("InAir", false);
+        //    //Animator.SetBool("InAir", false);
 
-            //Animator.SetBool("OnGround", true);
+        //    //Animator.SetBool("OnGround", true);
 
-        }
+        //}
 
         if (CanMove == false)
         {
@@ -217,7 +217,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-        if (CanMove == true && PerformLaunch == true && playerJump == true && canJump == true)
+        if (CanMove == true && PerformLaunch == true && playerJump == true && canJump == true && InAir == false)
         {
             print("jumpAnimGo");
             _pAnims.StartJumpAnim();
@@ -236,6 +236,7 @@ public class PlayerMovement : MonoBehaviour
         //}
         //else
         //{
+        InAir = true;
         _pAnims.ContinueJumpAnim();
 
             print("WTF");
@@ -264,7 +265,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (_velocityY >= -1)
+        if (_velocityY >= -1 && _velocityY <= 0)
         {
             InAir = false;
             // _animator.SetBool("Falling", false);
