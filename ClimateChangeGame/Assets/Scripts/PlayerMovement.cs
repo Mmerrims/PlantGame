@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     public float JumpForce;
     public bool PerformLaunch;
     public int Colliding;
+    [SerializeField] private bool _grounded;
 
     [SerializeField] private PlayerAnimations _pAnims;
     //[SerializeField] private Animator _animator;
@@ -80,48 +81,52 @@ public class PlayerMovement : MonoBehaviour
 
     private void Handle_JumpAction(InputAction.CallbackContext obj)
     {
-        //if (_parrying == false)
-        //{
-        // AudioSource.PlayClipAtPoint(Jumping, transform.position, 100);
-        if (CanMove == true)
+        if (Colliding > 0)
         {
-            //Can only be active if dash isn't occuring
-            //if (DashActive == false)
-
-
-            //Checks if the player is touching the ground
-            if (coyoteTimeCounter > 0f)
-            /// if (IsColliding == true)
+            //if (_parrying == false)
+            //{
+            // AudioSource.PlayClipAtPoint(Jumping, transform.position, 100);
+            if (CanMove == true)
             {
-                //Makes the player jump command activate
-                playerJump = true;
-                //Allows the PerformLaunch Command to be allowed.
-                PerformLaunch = true;
-                //Makes it so the double jump doesn't activate
-                //DoubleJump = false;
+                //Can only be active if dash isn't occuring
+                //if (DashActive == false)
+
+
+                //Checks if the player is touching the ground
+                if (coyoteTimeCounter > 0f)
+                /// if (IsColliding == true)
+                {
+                    //Makes the player jump command activate
+                    playerJump = true;
+                    //Allows the PerformLaunch Command to be allowed.
+                    PerformLaunch = true;
+                    //Makes it so the double jump doesn't activate
+                    //DoubleJump = false;
+                }
+                else
+                {
+
+                    //Makes is so the player can't jump, but they are able to double jump
+                    playerJump = false;
+                    PerformLaunch = true;
+                    //if (CanDoubleJump == true)
+                    //{
+                    //    DoubleJump = true;
+                    //    //Animator.SetBool("DoubleJump", true);
+                    //}
+
+
+
+                }
+                if (playerJump == true)
+                {
+                    PlayerShouldBeMoving = true;
+                }
+                //print("Handled Jump Started");
             }
-            else
-            {
-
-                //Makes is so the player can't jump, but they are able to double jump
-                playerJump = false;
-                PerformLaunch = true;
-                //if (CanDoubleJump == true)
-                //{
-                //    DoubleJump = true;
-                //    //Animator.SetBool("DoubleJump", true);
-                //}
-
-
-
-            }
-            if (playerJump == true)
-            {
-                PlayerShouldBeMoving = true;
-            }
-            //print("Handled Jump Started");
+            //}
         }
-        //}
+
 
 
 
@@ -223,6 +228,11 @@ public class PlayerMovement : MonoBehaviour
             _pAnims.StartJumpAnim();
             //Invoke("PerformJump", 0.05f);
             canJump = false;
+        }
+
+        if (PlayerRB.velocity.y < -.5 && Colliding > 0)
+        {
+            print("Falling");
         }
     }
 
@@ -336,6 +346,7 @@ public class PlayerMovement : MonoBehaviour
             // CanDoubleJump = false;
             //JumpIndicator.gameObject.SetActive(false);
             Colliding++;
+            _grounded = true;
         }
 
         if (collision.gameObject.layer == 11)
@@ -373,6 +384,7 @@ public class PlayerMovement : MonoBehaviour
             Colliding--;
             //CanDoubleJump = true;
             print("Left grass");
+            _grounded = false;
         }
 
         if (collision.gameObject.layer == 11)
