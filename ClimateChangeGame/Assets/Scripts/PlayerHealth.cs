@@ -29,19 +29,19 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 10)
+        if (collision.gameObject.layer == 14)
         {
             grass = false;
             oil = false;
             grounded = true;
         } 
-        else if (collision.gameObject.layer == 11)
+        else if (collision.gameObject.layer == 15)
         {
             grass = false;
             oil = true;
             grounded = true;
         }
-        else if (collision.gameObject.layer == 12)
+        else if (collision.gameObject.layer == 14)
         {
             grass = true;
             oil = false;
