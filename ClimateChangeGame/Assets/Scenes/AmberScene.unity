@@ -993,11 +993,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7708942679259281563, guid: 36709470cb90d0744941b2e1f131ef50, type: 3}
   m_PrefabInstance: {fileID: 1473577775889887434}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &180047196 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6144873667789592986, guid: afb614bd1bb87e3448e4233a0a8b2a37, type: 3}
-  m_PrefabInstance: {fileID: 4148052950449458471}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &187948992
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5983,6 +5978,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5004464218086991545, guid: 2d934188bf473384eb6151d2e2944e5a, type: 3}
   m_PrefabInstance: {fileID: 1415147866}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1418085265 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9142528963302527250, guid: 36709470cb90d0744941b2e1f131ef50, type: 3}
+  m_PrefabInstance: {fileID: 1473577775889887434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1418085266 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2788362392796570023, guid: 36709470cb90d0744941b2e1f131ef50, type: 3}
+  m_PrefabInstance: {fileID: 1473577775889887434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729b5ec37ae17cd4d81b36788721b179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1438616916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7233,8 +7244,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _anim: {fileID: 1735650872}
-  _transform1: {fileID: 180047196}
-  _transform2: {fileID: 161344167}
 --- !u!1001 &1745994891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9196,7 +9205,7 @@ PrefabInstance:
     - target: {fileID: 6196155622713973333, guid: 36709470cb90d0744941b2e1f131ef50, type: 3}
       propertyPath: _pGunAnims
       value: 
-      objectReference: {fileID: 1735650874}
+      objectReference: {fileID: 1418085266}
     - target: {fileID: 7720918223723802992, guid: 36709470cb90d0744941b2e1f131ef50, type: 3}
       propertyPath: Player
       value: 
@@ -9278,6 +9287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7274116961583824591, guid: afb614bd1bb87e3448e4233a0a8b2a37, type: 3}
+      propertyPath: _playerGunAnims
+      value: 
+      objectReference: {fileID: 1418085265}
     - target: {fileID: 8084820191630248670, guid: afb614bd1bb87e3448e4233a0a8b2a37, type: 3}
       propertyPath: JumpForce
       value: 1
