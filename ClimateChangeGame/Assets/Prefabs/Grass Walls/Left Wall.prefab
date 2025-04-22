@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4402188631213155545}
   - component: {fileID: 2111514856789059212}
   - component: {fileID: 3779277950636560587}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Left Wall
   m_TagString: GrassWall
   m_Icon: {fileID: 0}
@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -245,6 +249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grass (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -310,6 +318,10 @@ PrefabInstance:
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Name
       value: Grass (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

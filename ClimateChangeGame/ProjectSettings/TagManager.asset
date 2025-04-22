@@ -30,8 +30,8 @@ TagManager:
   - GroundOil
   - GroundGrass
   - Death
-  - 
-  - 
+  - TileGround
+  - TileOil
   - 
   - 
   - 
