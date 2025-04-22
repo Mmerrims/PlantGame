@@ -8,7 +8,7 @@ public class FollowPlayer : MonoBehaviour
     {
         if (Player != null)
         {
-            transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y);
+            transform.position = new Vector2(Player.transform.position.x, Player.transform.position.y + .4f);
         }
     }
 }

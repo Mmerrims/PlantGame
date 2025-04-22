@@ -389,7 +389,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.layer == 11)
         {
-            PlayerSpeed = 7;
+            PlayerSpeed = 9;
             JumpForce = 1f;
         }
     }
