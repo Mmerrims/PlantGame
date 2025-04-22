@@ -339,7 +339,7 @@ public class PlayerMovement : MonoBehaviour
         //    JumpForce = 3;
         //}
 
-        if (collision.gameObject.layer == 14 || collision.gameObject.layer == 15)
+        if (collision.gameObject.layer == 14 || collision.gameObject.layer == 15 || collision.gameObject.layer == 11)
         {
             _pAnims.SetGrounded(true);
             InAir = false;
@@ -349,7 +349,7 @@ public class PlayerMovement : MonoBehaviour
             _grounded = true;
         }
 
-        if (collision.gameObject.layer == 15)
+        if (collision.gameObject.layer == 15 || collision.gameObject.layer == 11)
         {
             PlayerSpeed = 2;
             JumpForce = .5f;
@@ -387,7 +387,7 @@ public class PlayerMovement : MonoBehaviour
             _grounded = false;
         }
 
-        if (collision.gameObject.layer == 15)
+        if (collision.gameObject.layer == 15 || collision.gameObject.layer == 11)
         {
             PlayerSpeed = 9;
             JumpForce = 1f;
