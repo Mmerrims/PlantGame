@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     [SerializeField] private GameObject ControlScreen;
+    [SerializeField] private GameObject CreditsScreen;
     [SerializeField] private GameObject Buttons;
 
     public void StartGame()
@@ -22,6 +23,18 @@ public class MainMenu : MonoBehaviour
     {
         //Not added yet since we don't have credits
         Debug.Log("Credits Button Activated");
+        if(Buttons.activeSelf == true)
+        {
+            CreditsScreen.SetActive(true);
+            ControlScreen.SetActive(false);
+            Buttons.SetActive(false);
+        }
+        else if(Buttons.activeSelf == false)
+        {
+            CreditsScreen.SetActive(false);
+            ControlScreen.SetActive(false);
+            Buttons.SetActive(true);
+        }
     }
 
     public void Controls()
@@ -32,11 +45,13 @@ public class MainMenu : MonoBehaviour
         if (Buttons.activeSelf == true) 
         {
             ControlScreen.SetActive(true);
+            CreditsScreen.SetActive(false);
             Buttons.SetActive(false);
         }
         else if (Buttons.activeSelf == false) 
         {
             ControlScreen.SetActive(false);
+            CreditsScreen.SetActive(false);
             Buttons.SetActive(true);
             
         }
