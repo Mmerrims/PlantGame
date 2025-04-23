@@ -7,9 +7,6 @@
                        what happens when it collides with the player
 *****************************************************************************/
 
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBulletScript : MonoBehaviour
