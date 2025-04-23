@@ -135,16 +135,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void Handle_JumpActionCanceled(InputAction.CallbackContext context)
     {
-        print("AAAAAAAAAAA");
+        //print("AAAAAAAAAAA");
+        ////if (PlayerRB.velocity.y > 0f)
+        ////{
+        //    Invoke("StopJump", .4f);
+        ////PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
+        //// }
         //if (PlayerRB.velocity.y > 0f)
         //{
-            Invoke("StopJump", .4f);
-        //PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
-        // }
-        if (PlayerRB.velocity.y > 0f)
-        {
-            PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
-        }
+        //    PlayerRB.velocity = new Vector2(PlayerRB.velocity.x, PlayerRB.velocity.y * 0.5f);
+        //}
 
     }
 
