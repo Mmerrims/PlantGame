@@ -9,6 +9,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float _baseSpeed;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _baseJumpPower;
+    [SerializeField] private float _foundJumpVelocity;
     [SerializeField] private bool _grounded;
     [SerializeField] private bool _canCancelJump;
     [SerializeField] private bool _cancelledJump;
@@ -18,6 +19,7 @@ public class PlayerControls : MonoBehaviour
 
     private void Awake()
     {
+        _foundJumpVelocity = 10;
         _checkpointManager = FindObjectOfType<CheckpointManager>();
         transform.position = _checkpointManager.LastCheckPointPos;
         _baseSpeed = _speed;
@@ -41,6 +43,22 @@ public class PlayerControls : MonoBehaviour
         if (_grounded)
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
+            _foundJumpVelocity = 10;
+        }
+
+        
+
+        if (!_grounded)
+        {
+            if (_rigidbody.velocity.y > _foundJumpVelocity)
+            {
+                _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, _foundJumpVelocity);
+            }
+
+            if (_rigidbody.velocity.y < _foundJumpVelocity)
+            {
+                _foundJumpVelocity = _rigidbody.velocity.y;
+            }
         }
 
         if (_rigidbody.velocity.y < 0)
@@ -75,6 +93,7 @@ public class PlayerControls : MonoBehaviour
         {
             if (_grounded)
             {
+                print("AUGH");
                 _canCancelJump = false;
                 _grounded = false;
                 _pAnims.StartJumpAnim();
