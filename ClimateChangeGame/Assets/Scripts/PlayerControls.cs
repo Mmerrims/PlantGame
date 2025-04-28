@@ -45,10 +45,7 @@ public class PlayerControls : MonoBehaviour
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, 0);
             _foundJumpVelocity = 10;
         }
-
-        
-
-        if (!_grounded)
+        else if (!_grounded)
         {
             if (_rigidbody.velocity.y > _foundJumpVelocity)
             {
@@ -131,8 +128,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (collision.gameObject.layer == 14 || collision.gameObject.layer == 15)
         {
-            _pAnims.SetGrounded(false);
-            _grounded = false;
+            Invoke("CoyoteTime", .08f);
         }
 
         if (collision.gameObject.layer == 15 || collision.gameObject.layer == 11)
@@ -140,6 +136,12 @@ public class PlayerControls : MonoBehaviour
             _speed = _baseSpeed;
             _jumpPower = _baseJumpPower;
         }
+    }
+
+    public void CoyoteTime()
+    {
+        _pAnims.SetGrounded(false);
+        _grounded = false;
     }
 
     public void Restart(InputAction.CallbackContext context)
