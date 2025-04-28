@@ -173,6 +173,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1501594090666227342, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501594090666227342, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
@@ -181,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -243,6 +247,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1501594090666227342, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501594090666227342, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
@@ -251,7 +259,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -313,6 +321,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1501594090666227342, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1501594090666227342, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
@@ -321,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7259443420099704265, guid: 8cc614abd52039d4ba7cd47a0c58f244, type: 3}
       propertyPath: m_Layer
-      value: 14
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

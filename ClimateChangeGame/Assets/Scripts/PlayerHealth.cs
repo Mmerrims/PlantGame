@@ -29,29 +29,6 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-       
-        if (collision.gameObject.layer == 11)
-        {
-            print("A");
-            grass = false;
-            oil = true;
-            grounded = true;
-        }
-        else if (collision.gameObject.layer == 14)
-        {
-            print("B");
-            grass = false;
-            oil = false;
-            grounded = true;
-        }
-        else if (collision.gameObject.layer == 14)
-        {
-            print("C");
-            grass = true;
-            oil = false;
-            grounded = true;
-        }
-
         if (collision.gameObject.layer == 13)
         {
             _health = 0;
@@ -69,20 +46,46 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12)
-    //    {
-    //        grounded = false;
-    //    }
-    //}
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 11)
+        {
+            print("A");
+            grass = false;
+            oil = true;
+            grounded = true;
+        }
+        else if (collision.gameObject.layer == 12)
+        {
+            print("C");
+            grass = true;
+            oil = false;
+            grounded = true;
+        }
+        //else if (collision.gameObject.layer == 14)
+        //{
+        //    print("B");
+        //    grass = false;
+        //    oil = false;
+        //    grounded = true;
+        //}
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 14)
+        {
+            grounded = false;
+        }
+    }
 
     private void Update()
     {
+
         _healthText.text = ("" + _health);
 
-        //if (grounded)
-        //{
+        if (grounded)
+        {
             if (grass)
             {
                 _health += _grassHealing * Time.deltaTime;
@@ -104,6 +107,6 @@ public class PlayerHealth : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-       // }
+        }
     }
 }

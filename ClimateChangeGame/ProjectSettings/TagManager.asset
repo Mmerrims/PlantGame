@@ -15,6 +15,7 @@ TagManager:
   - Oil3
   - Enemy
   - Oil4
+  - Oil5
   layers:
   - Default
   - TransparentFX
