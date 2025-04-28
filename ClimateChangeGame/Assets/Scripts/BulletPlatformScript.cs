@@ -7,7 +7,7 @@ public class BulletPlatformScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Oil") || collision.gameObject.CompareTag("GrassGround") || collision.gameObject.CompareTag("GrassWall"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Oil") || collision.gameObject.CompareTag("GrassGround") || collision.gameObject.CompareTag("GrassWall") || collision.gameObject.layer == 11)
         {
             GameObject SpawnPlatform = Instantiate(_spawnedObject, this.transform.position, this.transform.rotation);
             Destroy(_parentBullet);

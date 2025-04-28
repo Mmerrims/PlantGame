@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5052612479402894602}
   - component: {fileID: 2806142119610690727}
   - component: {fileID: 5864117935867661474}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Down
   m_TagString: BigGrass
   m_Icon: {fileID: 0}
@@ -447,7 +447,7 @@ GameObject:
   - component: {fileID: 2999561984649891817}
   - component: {fileID: 8880402487706225434}
   - component: {fileID: 3682194258295563366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Right
   m_TagString: BigGrass
   m_Icon: {fileID: 0}
@@ -929,7 +929,7 @@ GameObject:
   - component: {fileID: 7477362816566119866}
   - component: {fileID: 4480757752098287535}
   - component: {fileID: 829386573020221512}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Left
   m_TagString: BigGrass
   m_Icon: {fileID: 0}
@@ -1074,7 +1074,7 @@ GameObject:
   - component: {fileID: 4895907758451232230}
   - component: {fileID: 4594914727291499043}
   - component: {fileID: 3514724390566005621}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Up
   m_TagString: BigGrass
   m_Icon: {fileID: 0}
