@@ -1,3 +1,11 @@
+/*****************************************************************************
+// File Name :         Player Controls.cs
+// Author :            Amber C. Cardamone
+// Creation Date :     April 29th, 2025
+//
+// Brief Description : 
+*****************************************************************************/
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -153,5 +161,11 @@ public class PlayerControls : MonoBehaviour
     {
         Application.Quit();
         print("Quit");
+    }
+
+    public void disableMovement()
+    {
+        _speed = 0;
+        _jumpPower = 0;
     }
 }
