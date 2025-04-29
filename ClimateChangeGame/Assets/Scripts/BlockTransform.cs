@@ -17,6 +17,39 @@ public class BlockTransform : MonoBehaviour
         if (_oil == true && collision.gameObject.CompareTag("Grass") || _ground == true && collision.gameObject.CompareTag("Grass"))
         {
             _health -= 1;
+            if (_health == 3)
+            {
+                if (_oil)
+                {
+                    gameObject.GetComponent<Animator>().Play("Oil2");
+                }
+                else
+                {
+                    gameObject.GetComponent<Animator>().Play("Ground2");
+                }
+            }
+            else if (_health == 2)
+            {
+                if (_oil)
+                {
+                    gameObject.GetComponent<Animator>().Play("Oil3");
+                }
+                else
+                {
+                    gameObject.GetComponent<Animator>().Play("Ground3");
+                }
+            }
+            else if (_health == 1)
+            {
+                if (_oil)
+                {
+                    gameObject.GetComponent<Animator>().Play("Oil4");
+                }
+                else
+                {
+                    gameObject.GetComponent<Animator>().Play("Ground4");
+                }
+            }
             Destroy(collision.gameObject);
             if (_health <= 0)
             {
