@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
@@ -13,18 +14,20 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private bool grass;
     [SerializeField] private bool oil;
     [SerializeField] private bool grounded;
-    [SerializeField] private GameObject _healthTextObject;
-    [SerializeField] private TMP_Text _healthText;
+    //[SerializeField] private GameObject _healthTextObject;
+    //[SerializeField] private TMP_Text _healthText;
 
+    public Image healthBar;
     private void Start()
     {
         _health = _maxHealth;
         _playerMovement = FindObjectOfType<PlayerMovement>();
-        _healthTextObject = GameObject.Find("HealthText");
-        if (_healthTextObject != null)
-        {
-            _healthText = _healthTextObject.GetComponent<TMP_Text>();
-        }
+        //healthBar = FindObjectOfType<Image>();
+        //_healthTextObject = GameObject.Find("HealthText");
+        //if (_healthTextObject != null)
+        //{
+        //    _healthText = _healthTextObject.GetComponent<TMP_Text>();
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -82,7 +85,12 @@ public class PlayerHealth : MonoBehaviour
     private void Update()
     {
 
-        _healthText.text = ("" + _health);
+        //_healthText.text = ("" + _health);
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = _health / _maxHealth;
+        }
+        
 
         if (grounded)
         {
