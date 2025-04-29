@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +6,7 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject ControlScreen;
     [SerializeField] private GameObject CreditsScreen;
     [SerializeField] private GameObject Buttons;
+    [SerializeField] private CheckpointManager _checkpointManager;
 
     public void StartGame()
     {
@@ -60,6 +59,7 @@ public class MainMenu : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        _checkpointManager.NewLevel();
         SceneManager.LoadScene(0);
     }
 }
