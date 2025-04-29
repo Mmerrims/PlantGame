@@ -6,6 +6,7 @@ public class PlatformChecker : MonoBehaviour
 {
     [SerializeField] private float _lifeTime;
     [SerializeField] private float _shortLifeTime;
+    [SerializeField] private Animator _anim;
 
     private void Start()
     {
@@ -40,13 +41,20 @@ public class PlatformChecker : MonoBehaviour
     {
         yield return new WaitForSeconds(_lifeTime);
 
-        Destroy(gameObject);
+        _anim.Play("CellBlockDestroy");
+        Invoke("DestroyWall", 0.1f);
     }
 
     IEnumerator QuickDie()
     {
         yield return new WaitForSeconds(_shortLifeTime);
 
+        _anim.Play("CellBlockDestroy");
+        Invoke("DestroyWall", 0.1f);
+    }
+
+    public void DestroyWall()
+    {
         Destroy(gameObject);
     }
 

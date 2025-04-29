@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 45b3cc80f4dc29d41a76c400718fe21b
+guid: 08ed5188b4b1f6a459d30667c4d9a4e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 96
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChloroblastCellBlock_0
+      name: ChloroblastPlantTilesB_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 192
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82b3f5d5f5cbc3b4883aa979e3a74b09
-      internalID: -1338248263
+      spriteID: 690304bfeea9f404d9911d65bce59dc5
+      internalID: -1828973310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChloroblastCellBlock_1
+      name: ChloroblastPlantTilesB_1
       rect:
         serializedVersion: 2
-        x: 96
+        x: 100
         y: 0
-        width: 96
-        height: 192
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8bf7579f875be5d409372549bb57ea00
-      internalID: 576701131
+      spriteID: 2239e8807e1bfe945bcb279b6d4b773b
+      internalID: 599043018
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChloroblastCellBlock_2
+      name: ChloroblastPlantTilesB_2
       rect:
         serializedVersion: 2
-        x: 192
+        x: 200
         y: 0
-        width: 96
-        height: 192
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59bc4964faabc084ab3eadbacbee1f00
-      internalID: -1357728048
+      spriteID: 2c91dc4560999be43853978e9cab46b1
+      internalID: 1495215530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChloroblastCellBlock_3
+      name: ChloroblastPlantTilesB_3
       rect:
         serializedVersion: 2
-        x: 288
+        x: 300
         y: 0
-        width: 96
-        height: 192
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d1cb9d0ade83014e80926b37ae0e3bd
-      internalID: -2099761405
+      spriteID: 2203399e48b0b924995b243db9587704
+      internalID: -1488411736
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChloroblastCellBlock_4
+      name: ChloroblastPlantTilesB_4
       rect:
         serializedVersion: 2
-        x: 384
+        x: 400
         y: 0
-        width: 96
-        height: 192
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 183d30d9b571e8a499bf0dd59595e5ea
-      internalID: 160246722
+      spriteID: c25052495255d604f8dddfd3337935e9
+      internalID: -326732047
       vertices: []
       indices: 
       edges: []
@@ -225,11 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ChloroblastCellBlock_0: -1338248263
-      ChloroblastCellBlock_1: 576701131
-      ChloroblastCellBlock_2: -1357728048
-      ChloroblastCellBlock_3: -2099761405
-      ChloroblastCellBlock_4: 160246722
+      ChloroblastPlantTilesB_0: -1828973310
+      ChloroblastPlantTilesB_1: 599043018
+      ChloroblastPlantTilesB_2: 1495215530
+      ChloroblastPlantTilesB_3: -1488411736
+      ChloroblastPlantTilesB_4: -326732047
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
