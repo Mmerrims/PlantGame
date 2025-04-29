@@ -20,6 +20,14 @@ public class PlatformChecker : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("OilBullet") || collision.gameObject.CompareTag("Oil") || collision.gameObject.layer == 11)
+        {
+            GoToDie();
+        }
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("GrassWall"))
