@@ -47,7 +47,7 @@ public class EnemyPatrol : MonoBehaviour
     }
 
     //It calculates the distance between the two distances and determines what to do then, it also uses the NextMovementDirectionHandler
-    private void Update()
+    private void FixedUpdate()
     {
         if (shootingScript != null && shootingScript.IsTargetInRange)
         {
