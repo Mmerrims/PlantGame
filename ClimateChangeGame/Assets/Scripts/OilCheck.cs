@@ -6,12 +6,16 @@ public class OilCheck : MonoBehaviour
 {
     [SerializeField] private List<GameObject> _oil;
     [SerializeField] private bool _activateWin;
+    [SerializeField] private bool _disablePlayer;
     [SerializeField] private GameObject _blocker;
     [SerializeField] private string _oilTag;
+    [SerializeField] private PlayerControls _playerControls;
 
     // Update is called once per frame
     private void Start()
     {
+        _playerControls = FindObjectOfType<PlayerControls>();
+
         foreach (GameObject _oilTile in GameObject.FindGameObjectsWithTag(_oilTag))
         {
 
@@ -36,6 +40,11 @@ public class OilCheck : MonoBehaviour
             else
             {
                 _blocker.SetActive(true);
+            }
+
+            if (_disablePlayer)
+            {
+                _playerControls.disableMovement();
             }
         }
     }
