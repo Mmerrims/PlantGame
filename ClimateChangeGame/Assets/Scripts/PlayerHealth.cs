@@ -80,6 +80,34 @@ public class PlayerHealth : MonoBehaviour
         {
             grounded = false;
         }
+
+        if (collision.gameObject.layer == 11)
+        {
+            oil = false;
+        }
+
+        if (collision.gameObject.layer == 12)
+        {
+            grass = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 10 || collision.gameObject.layer == 11 || collision.gameObject.layer == 12 || collision.gameObject.layer == 14)
+        {
+            grounded = false;
+        }
+
+        if (collision.gameObject.layer == 11)
+        {
+            oil = false;
+        }
+
+        if (collision.gameObject.layer == 12)
+        {
+            grass = false;
+        }
     }
 
     private void Update()
