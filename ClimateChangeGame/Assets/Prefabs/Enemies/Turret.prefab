@@ -175,7 +175,7 @@ MonoBehaviour:
   bullet: {fileID: 5302910800254186590, guid: 4321733228d197e4bb188049b1173644, type: 3}
   bulletPos: {fileID: 5337110861108316299}
   Health: 50
-  shootDistance: 8
+  shootDistance: 13
 --- !u!1 &8709771898328707122
 GameObject:
   m_ObjectHideFlags: 0
