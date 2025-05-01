@@ -19,6 +19,13 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private AudioManager audioManager;
     [SerializeField] private bool isTurret = false;
 
+    [SerializeField] private Animator _alarmPole;
+    [SerializeField] private Animator _turretLeft;
+    [SerializeField] private Animator _turretRight;
+    [SerializeField] private GameObject _turretLeftSprite;
+    [SerializeField] private GameObject _turretRightSprite;
+    [SerializeField] private Transform _turretSpinBase;
+
 
     private float timer;
     [SerializeField] private float shootDistance = 6;
@@ -38,6 +45,20 @@ public class EnemyShooting : MonoBehaviour
     // It sets a range around the enemy that when the player enters it, it shoots bullets within a certain time limit of eachother
     void Update()
     {
+        if (isTurret)
+        {
+            if (bulletPos.position.x < _turretSpinBase.position.x)
+            {
+                _turretLeftSprite.SetActive(true);
+                _turretRightSprite.SetActive(false);
+            }
+            else
+            {
+                _turretLeftSprite.SetActive(false);
+                _turretRightSprite.SetActive(true);
+            }
+        }
+
 
         float distance = Vector2.Distance(transform.position, Player.transform.position);
         IsTargetInRange = distance < shootDistance;
@@ -46,12 +67,25 @@ public class EnemyShooting : MonoBehaviour
         if(IsTargetInRange)
         {
             timer += Time.deltaTime;
+            if (isTurret)
+            {
+                _alarmPole.SetBool("IsActive", true);
+            }
 
             if (timer > 2)
             {
                 timer = 0;
+                if (isTurret)
+                {
+                    _turretLeft.Play("TurretShoot");
+                    _turretRight.Play("TurretShoot");
+                }
                 shoot();
             }
+        }
+        else if (isTurret)
+        {
+            _alarmPole.SetBool("IsActive", false);
         }
 
         if (Health <= 0)

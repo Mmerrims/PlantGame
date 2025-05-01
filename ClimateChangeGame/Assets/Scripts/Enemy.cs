@@ -32,6 +32,8 @@ public class EnemyPatrol : MonoBehaviour
     private EnemyShooting shootingScript = null;
 
     [SerializeField] private AudioSource EnemyWalk;
+    [SerializeField] private SpriteRenderer _sprite;
+    [SerializeField] private Animator _anim;
 
     private AudioSource audioSource;
 
@@ -61,6 +63,21 @@ public class EnemyPatrol : MonoBehaviour
         else
         {
             Move();
+        }
+
+        if (movementDirection.x > 0)
+        {
+            _anim.Play("SentryWalk");
+            _sprite.flipX = true;
+        }
+        else if (movementDirection.x < 0)
+        {
+            _anim.Play("SentryWalk");
+            _sprite.flipX = false;
+        }
+        else
+        {
+            _anim.Play("SentryIdle");
         }
 
 
@@ -141,4 +158,6 @@ public class EnemyPatrol : MonoBehaviour
     {
         return pointPos - (Vector2)transform.position;
     }
+
+    
 }
