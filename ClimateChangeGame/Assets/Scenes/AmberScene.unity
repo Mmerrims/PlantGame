@@ -4429,8 +4429,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oil: []
   _activateWin: 1
+  _disablePlayer: 0
   _blocker: {fileID: 1224023095}
   _oilTag: Oil2
+  _playerControls: {fileID: 0}
 --- !u!4 &992500127
 Transform:
   m_ObjectHideFlags: 0
@@ -4460,8 +4462,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oil: []
   _activateWin: 1
+  _disablePlayer: 0
   _blocker: {fileID: 734287268}
   _oilTag: Oil2
+  _playerControls: {fileID: 0}
 --- !u!1 &1001199608
 GameObject:
   m_ObjectHideFlags: 0
@@ -9960,8 +9964,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _oil: []
   _activateWin: 0
+  _disablePlayer: 0
   _blocker: {fileID: 2139761471}
   _oilTag: Oil
+  _playerControls: {fileID: 0}
 --- !u!4 &2067429043
 Transform:
   m_ObjectHideFlags: 0
@@ -10733,6 +10739,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2684768032875746461}
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerControls, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 432957497249696724, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5305135095671032601, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.13
@@ -10810,6 +10844,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+--- !u!114 &2684768032875746461 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4943202830681857217, guid: fb2f35ec3d3f2b041b06c1e1717f25c0, type: 3}
+  m_PrefabInstance: {fileID: 2684768032875746460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141914415183228328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5c6eb782c9dd0459051f3a661aaa47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3232120445566892701
 PrefabInstance:
   m_ObjectHideFlags: 0
