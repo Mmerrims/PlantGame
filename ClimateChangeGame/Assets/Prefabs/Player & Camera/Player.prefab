@@ -351,8 +351,7 @@ MonoBehaviour:
   grass: 0
   oil: 0
   grounded: 0
-  _healthTextObject: {fileID: 0}
-  _healthText: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &6972652548892897102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +385,7 @@ MonoBehaviour:
   _baseSpeed: 0
   _jumpPower: 9
   _baseJumpPower: 0
+  _foundJumpVelocity: 0
   _grounded: 0
   _canCancelJump: 0
   _cancelledJump: 0
@@ -604,11 +604,35 @@ MonoBehaviour:
     m_ActionId: 4b503ccd-f5e2-448b-8f46-f511cd934de2
     m_ActionName: Player Movement/Jump[/Keyboard/space,/Keyboard/w]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4943202830681857217}
+        m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ade3921f-7a6c-4a6d-af28-cdeda293174d
     m_ActionName: Player Movement/Quit[/Keyboard/escape]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4943202830681857217}
+        m_TargetAssemblyTypeName: PlayerControls, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ff42fee2-8d4c-4262-b209-33505315adfa
     m_ActionName: Player Movement/Restart[/Keyboard/r]
   - m_PersistentCalls:
