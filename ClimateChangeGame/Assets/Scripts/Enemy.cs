@@ -31,9 +31,14 @@ public class EnemyPatrol : MonoBehaviour
 
     private EnemyShooting shootingScript = null;
 
+    [SerializeField] private AudioSource EnemyWalk;
+
+    private AudioSource audioSource;
+
     private void Awake()
     {
         shootingScript = GetComponent<EnemyShooting>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     //It calls the inicial movement direction, stores it and then starts the starting variables
@@ -77,6 +82,7 @@ public class EnemyPatrol : MonoBehaviour
     private void Move()
     {
         transform.Translate(movementDirection.normalized * movementSpeed * (1 - Mathf.Exp(-smoothingSpeed * Time.fixedDeltaTime)));
+        
 
         NextMovementDirectionHandler();
     }
@@ -93,6 +99,7 @@ public class EnemyPatrol : MonoBehaviour
             {
                 timeStamp = Time.time;
                 timeStampOnce = false;
+                OnMoveStart();
             }
 
             if((Time.time - timeStamp) > stoppingTime)
@@ -105,8 +112,19 @@ public class EnemyPatrol : MonoBehaviour
                 movementDirection = GetMovementDirection(points[pointIndex].position);
                 timeStamp = 0.0f;
                 timeStampOnce = true;
+                OnMoveStop();
             }
         }
+    }
+
+    private void OnMoveStop()
+    {
+        EnemyWalk.Stop();
+    }
+
+    private void OnMoveStart()
+    {
+        EnemyWalk.Play();
     }
 
     //It makes the two points visable
