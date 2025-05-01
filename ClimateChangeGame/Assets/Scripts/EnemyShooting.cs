@@ -15,6 +15,9 @@ public class EnemyShooting : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPos;
     [SerializeField] private float Health = 5f;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private bool isTurret = false;
 
 
     private float timer;
@@ -25,6 +28,11 @@ public class EnemyShooting : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        var audioManagerObject = GameObject.Find("AudioManager");
+        if (audioManagerObject != null)
+        {
+            audioManager = audioManagerObject.GetComponent<AudioManager>();
+        }
     }
 
     // It sets a range around the enemy that when the player enters it, it shoots bullets within a certain time limit of eachother
@@ -48,6 +56,10 @@ public class EnemyShooting : MonoBehaviour
 
         if (Health <= 0)
         {
+            if(isTurret)
+            {
+                audioManager.Turret();
+            }
             Destroy(gameObject);
         }
 
