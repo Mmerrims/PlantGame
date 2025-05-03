@@ -37,6 +37,8 @@ public class ShootScript : MonoBehaviour
 
     [SerializeField] private PlayerGunAnimations _pGunAnims;
 
+    [SerializeField] private AudioSource ShootGooSFX;
+
     // [SerializeField] private GameManager _gameManager;
 
     private bool shooting;
@@ -81,6 +83,9 @@ public class ShootScript : MonoBehaviour
         shootLock = false;
         Invoke("PerformShoot", 0.15f);
         _pGunAnims.StartShoot();
+        Debug.Log("Please Goo");
+        GooSFXStart();
+        
     }
 
     public void PerformShoot()
@@ -97,6 +102,18 @@ public class ShootScript : MonoBehaviour
         shootLock = true;
         shooting = false;
         _pGunAnims.EndShoot();
+        Debug.Log("Please Goo 2");
+        GooSFXStop();
+    }
+
+    private void GooSFXStart()
+    {
+        ShootGooSFX.Play();
+    }
+
+    private void GooSFXStop()
+    {
+        ShootGooSFX.Stop();
     }
 
     private void ShootAltStart(InputAction.CallbackContext obj)
