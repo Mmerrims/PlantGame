@@ -3,7 +3,7 @@
 // Author :            Amber C. Cardamone
 // Creation Date :     April 29th, 2025
 //
-// Brief Description : 
+// Brief Description : Controls the player's movement, where they spawn, controls restart/quit, and checks if grounded or not.
 *****************************************************************************/
 
 using UnityEngine;
@@ -25,6 +25,9 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private CheckpointManager _checkpointManager;
     private Rigidbody2D _rigidbody;
 
+    /// <summary>
+    /// Checks the spawn position, and sets up rigidbody detection and normalized movement values
+    /// </summary>
     private void Awake()
     {
         _foundJumpVelocity = 10;
@@ -35,6 +38,10 @@ public class PlayerControls : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    /// <summary>
+    /// Gives the player the ability to move, checks their direction and flips accordingly, and locks player upwards momentum,
+    /// causing them to not gain additional height off slopes. Also allows for dynamic jump height.
+    /// </summary>
     private void FixedUpdate()
     {
         _rigidbody.velocity = new Vector2(_horizontal * _speed, _rigidbody.velocity.y);
@@ -87,18 +94,26 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Grabs the player's input actions, allowing the player to move.
+    /// </summary>
+    /// <param name="context"></param>
     public void Move(InputAction.CallbackContext context)
     {
         _horizontal = context.ReadValue<Vector2>().x;
     }
 
+    /// <summary>
+    /// Checks if the player has pressed/stopped pressing the input button, if they press it and are launched, they 
+    /// will launch upwards, otherwise their vertical velocity will be stopped.
+    /// </summary>
+    /// <param name="context"></param>
     public void Jump(InputAction.CallbackContext context)
     {
         if (context.started)
         {
             if (_grounded)
             {
-                print("AUGH");
                 _canCancelJump = false;
                 _grounded = false;
                 _pAnims.StartJumpAnim();
@@ -117,6 +132,10 @@ public class PlayerControls : MonoBehaviour
         _canCancelJump = true;
     }
 
+    /// <summary>
+    /// Checks if the player is currently grounded, if they are grounded on oil with the oil layer, they will be slowed.
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 14 || collision.gameObject.layer == 15)
@@ -132,6 +151,10 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If the player leaves the ground, they will gain a short time to continue jumping (coyotetime), and they will regain their speed if they leave oil.
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.layer == 14 || collision.gameObject.layer == 15)
@@ -146,23 +169,37 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Once coyotetime is done, the player stops being counted as being on ground.
+    /// </summary>
     public void CoyoteTime()
     {
         _pAnims.SetGrounded(false);
         _grounded = false;
     }
 
+    /// <summary>
+    /// Restarts the scene
+    /// </summary>
+    /// <param name="context"></param>
     public void Restart(InputAction.CallbackContext context)
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    /// <summary>
+    /// Quits the Game.
+    /// </summary>
+    /// <param name="context"></param>
     public void Quit(InputAction.CallbackContext context)
     {
         Application.Quit();
         print("Quit");
     }
 
+    /// <summary>
+    /// Stops the player from moving, used in the end sequence
+    /// </summary>
     public void disableMovement()
     {
         _speed = 0;
