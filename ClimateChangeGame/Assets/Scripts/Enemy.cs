@@ -37,6 +37,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private AudioSource audioSource;
 
+    //Once the game starts, it finds the both the shoot script and the audio source
     private void Awake()
     {
         shootingScript = GetComponent<EnemyShooting>();
@@ -83,6 +84,7 @@ public class EnemyPatrol : MonoBehaviour
 
     }
 
+    //Once the player enters the enemie's shoot radius, it mantaines a certain distance away from the player before shooting
     private void shootMove()
     {
         float distance = Vector2.Distance(transform.position, shootingScript.Player.transform.position);
@@ -91,11 +93,9 @@ public class EnemyPatrol : MonoBehaviour
             float diff = transform.position.x - shootingScript.Player.transform.position.x;
             transform.Translate(Vector3.right * diff * shootingMovementSpeed * (1 - Mathf.Exp(-smoothingSpeed * Time.fixedDeltaTime)));
         }
-        
-
-
     }
 
+    //It moves the player between the two movements points back and foward and finds the next movement direction
     private void Move()
     {
         transform.Translate(movementDirection.normalized * movementSpeed * (1 - Mathf.Exp(-smoothingSpeed * Time.fixedDeltaTime)));
@@ -134,11 +134,13 @@ public class EnemyPatrol : MonoBehaviour
         }
     }
 
+    // It stops the enemy walk sfx
     private void OnMoveStop()
     {
         EnemyWalkSFX.Stop();
     }
 
+    // It starts the enemy start sfx
     private void OnMoveStart()
     {
         EnemyWalkSFX.Play();

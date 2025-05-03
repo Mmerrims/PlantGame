@@ -1,3 +1,10 @@
+/*****************************************************************************
+// File Name :         Bullet Script.cs
+// Author :            Yael Martoral
+// Creation Date :     April 5th, 2025
+//
+// Brief Description : It makes the turret's sprite face the player
+*****************************************************************************/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
