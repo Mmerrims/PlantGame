@@ -241,6 +241,7 @@ MonoBehaviour:
   _alarmPole: {fileID: 0}
   _turretLeft: {fileID: 0}
   _turretRight: {fileID: 0}
+  _sentryAnim: {fileID: 3759273216831694935}
   _turretLeftSprite: {fileID: 0}
   _turretRightSprite: {fileID: 0}
   _turretSpinBase: {fileID: 0}

@@ -22,6 +22,7 @@ public class EnemyShooting : MonoBehaviour
     [SerializeField] private Animator _alarmPole;
     [SerializeField] private Animator _turretLeft;
     [SerializeField] private Animator _turretRight;
+    [SerializeField] private Animator _sentryAnim;
     [SerializeField] private GameObject _turretLeftSprite;
     [SerializeField] private GameObject _turretRightSprite;
     [SerializeField] private Transform _turretSpinBase;
@@ -79,8 +80,13 @@ public class EnemyShooting : MonoBehaviour
                 {
                     _turretLeft.Play("TurretShoot");
                     _turretRight.Play("TurretShoot");
+                    shoot();
                 }
-                shoot();
+                else
+                {
+                    _sentryAnim.Play("SentryShoot");
+                    Invoke("shoot", 0.3f);
+                }
             }
         }
         else if (isTurret)
