@@ -1,3 +1,11 @@
+/*****************************************************************************
+// File Name :         BlockTransform.cs
+// Author :            Amber C. Cardamone
+// Creation Date :     April 29th, 2025
+//
+// Brief Description : Changes the blocks based off of what objects hit them.
+*****************************************************************************/
+
 using UnityEngine;
 
 public class BlockTransform : MonoBehaviour
@@ -10,7 +18,10 @@ public class BlockTransform : MonoBehaviour
     [SerializeField] private float _health;
 
 
-
+    /// <summary>
+    /// Checks if this gameobject collides with a bullet, if its grass, it takes damage until it transforms into another block, changing its sprite as well. If it collides with oil, it immediately changes to an oil block.
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
