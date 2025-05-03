@@ -131,7 +131,7 @@ MonoBehaviour:
   player: {fileID: 0}
   force: 18
   despawnTime: 4
-  yoffset: 2
+  yoffset: 0
 --- !u!61 &-7678559921020263285
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -190,8 +190,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bigBullet: 0
-  audioSource: {fileID: 0}
-  audioManager: {fileID: 0}
 --- !u!1 &7568940707143044478
 GameObject:
   m_ObjectHideFlags: 0
