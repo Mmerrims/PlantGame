@@ -1,6 +1,6 @@
 /*****************************************************************************
-// File Name :         Bullet Script.cs
-// Author :            Yael Martoral
+// File Name :         TurretFace.cs
+// Author :            Cam Drane
 // Creation Date :     April 5th, 2025
 //
 // Brief Description : It makes the turret's sprite face the player
