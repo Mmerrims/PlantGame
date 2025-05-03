@@ -1,3 +1,11 @@
+/*****************************************************************************
+// File Name :         Oil Check.cs
+// Author :            Amber C. Cardamone
+// Creation Date :     April 29th, 2025
+//
+// Brief Description : Adds all the objects with the same tag together, and once all those gameobjects are gone, activates/disables an object.
+*****************************************************************************/
+
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,7 +19,9 @@ public class OilCheck : MonoBehaviour
     [SerializeField] private string _oilTag;
     [SerializeField] private PlayerControls _playerControls;
 
-    // Update is called once per frame
+    /// <summary>
+    /// Finds every gameobject with the tag defined by the _oilTag string.
+    /// </summary>
     private void Start()
     {
         _playerControls = FindObjectOfType<PlayerControls>();
@@ -23,11 +33,11 @@ public class OilCheck : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Checks the remaining oil count, if none are left, enables/disables an object.
+    /// </summary>
     void Update()
     {
-        
-
-
         _oil = _oil.Where(item => item != null).ToList();
 
         if (_oil.Count == 0)
