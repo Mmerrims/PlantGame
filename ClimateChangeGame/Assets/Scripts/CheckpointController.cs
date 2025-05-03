@@ -1,3 +1,11 @@
+/*****************************************************************************
+// File Name :         Checkpoint Controller.cs
+// Author :            Amber C. Cardamone
+// Creation Date :     April 29th, 2025
+//
+// Brief Description : Sets the player's position after they hit a checkpoint object, stays active throughout scene loads.
+*****************************************************************************/
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -29,6 +37,9 @@ public class CheckpointManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// If spawning back into the main level, resets the player back to the start.
+    /// </summary>
     public void NewLevel()
     {
         LastCheckPointPos = new Vector3(0, 0, 0);
