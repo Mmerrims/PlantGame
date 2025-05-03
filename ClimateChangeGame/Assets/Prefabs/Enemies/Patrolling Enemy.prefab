@@ -217,7 +217,7 @@ MonoBehaviour:
   stoppingTime: 2
   shootingMovementSpeed: 1
   shootMoveRadius: 0
-  EnemyWalk: {fileID: 141141288267694275}
+  EnemyWalkSFX: {fileID: 141141288267694275}
   _sprite: {fileID: 5704668878073501000}
   _anim: {fileID: 3759273216831694935}
 --- !u!114 &8074455859012260024
@@ -238,6 +238,12 @@ MonoBehaviour:
   audioSource: {fileID: 141141288267694275}
   audioManager: {fileID: 0}
   isTurret: 0
+  _alarmPole: {fileID: 0}
+  _turretLeft: {fileID: 0}
+  _turretRight: {fileID: 0}
+  _turretLeftSprite: {fileID: 0}
+  _turretRightSprite: {fileID: 0}
+  _turretSpinBase: {fileID: 0}
   shootDistance: 4
 --- !u!82 &141141288267694275
 AudioSource:

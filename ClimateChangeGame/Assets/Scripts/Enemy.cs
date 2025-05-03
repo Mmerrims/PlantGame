@@ -31,7 +31,7 @@ public class EnemyPatrol : MonoBehaviour
 
     private EnemyShooting shootingScript = null;
 
-    [SerializeField] private AudioSource EnemyWalk;
+    [SerializeField] private AudioSource EnemyWalkSFX;
     [SerializeField] private SpriteRenderer _sprite;
     [SerializeField] private Animator _anim;
 
@@ -136,12 +136,12 @@ public class EnemyPatrol : MonoBehaviour
 
     private void OnMoveStop()
     {
-        EnemyWalk.Stop();
+        EnemyWalkSFX.Stop();
     }
 
     private void OnMoveStart()
     {
-        EnemyWalk.Play();
+        EnemyWalkSFX.Play();
     }
 
     //It makes the two points visable
