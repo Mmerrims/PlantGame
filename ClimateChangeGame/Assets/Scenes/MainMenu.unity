@@ -835,8 +835,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4279467066
+  m_fontColor: {r: 0.22745098, g: 0.4862745, b: 0.07450981, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1105,8 +1105,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.1617, y: -68.456276}
-  m_SizeDelta: {x: 741.327, y: 271.5009}
+  m_AnchoredPosition: {x: 10.1818, y: 11.7438}
+  m_SizeDelta: {x: 989.9467, y: 656.4604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &724868701
 MonoBehaviour:
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6754716, g: 0.61557126, b: 0.61557126, a: 1}
+  m_Color: {r: 0.20392157, g: 0.011764706, b: 0.20784314, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
