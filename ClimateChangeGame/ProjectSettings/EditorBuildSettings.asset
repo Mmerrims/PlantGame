@@ -8,9 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 2b2ac1b1a6ed0f74bb02f343b2612e62
-  - enabled: 0
-    path: Assets/Scenes/AmberScene.unity
-    guid: 0de5d8d0296de11438a99b51b458cdb9
   - enabled: 1
     path: Assets/Scenes/Tyri Scene.unity
     guid: 5392dd2590992a2429eabdab9d67ded9
